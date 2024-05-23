@@ -3,8 +3,9 @@ import React from "react";
 import ViewChart from "../components/charts/ViewChart";
 import { Button } from "@/components/ui/button";
 import RevenueChart from "../components/charts/RevenueChart";
-import RadialChart from "../components/charts/RadialChart";
 import Link from "next/link";
+import DashboardReviewCard from "./components/DashboardReviewCard";
+import RadialProgress from "./components/RadialProgress";
 
 const Dashboard = () => {
   return (
@@ -34,7 +35,7 @@ const Dashboard = () => {
                 <p className="text-para font-bold">Total Survey</p>
                 <p className="text-para text-apex-grey-dark">Target 3k/month</p>
               </div>
-              <RadialChart name="Total Survey" data={2356} />
+              <RadialProgress value={71} max={100} color="blue-200" />
             </div>
             <div className="bg-white flex items-center justify-between rounded-xl px-3 py-4">
               <div className="flex flex-col gap-3 flex-1">
@@ -42,7 +43,7 @@ const Dashboard = () => {
                 <p className="text-para font-bold">No of Booked Survey</p>
                 <p className="text-para text-apex-grey-dark">Target 3k/month</p>
               </div>
-              <RadialChart name="Total Survey" data={2356} />
+              <RadialProgress value={71} max={100} color="green-200" />
             </div>
           </div>
         </div>
@@ -75,6 +76,10 @@ const Dashboard = () => {
             <Button className="bg-transparent hover:bg-transparent p-2">
               <LucideMoreHorizontal className="size-8 text-black" />
             </Button>
+          </div>
+          <div className="flex flex-col gap-2 p-2 w-[85%] h-full justify-between">
+            <DashboardReviewCard />
+            <DashboardReviewCard />
           </div>
           <Link
             href={"#"}
