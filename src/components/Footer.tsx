@@ -1,8 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { usefulLinks, socialLinks, footerNavLinks } from "@/lib/constants";
+import {
+  usefulLinks,
+  socialLinks,
+  footerNavLinks,
+  contactInformation,
+} from "@/lib/constants";
 
 export default function Footer() {
+  const phoneNumber = contactInformation.filter((contact) =>
+    contact.icon.includes("phone")
+  )[0].details;
   return (
     <footer className="bg-apex-dark w-full px-8 py-3 lg:px-16 lg:py-6">
       <div className="flex flex-col gap-12 max-w-screen-xl mx-auto">
@@ -63,9 +71,9 @@ export default function Footer() {
                     height={20}
                   />
                 </div>
-                <Link href={`tel:+0800 048 7474`}>
+                <Link href={`tel:+${phoneNumber}`}>
                   <h4 className="text-h4 text-white">Call Us Today</h4>
-                  <p className="text-white text-para">0800 048 7474</p>
+                  <p className="text-white text-para">{phoneNumber}</p>
                 </Link>
               </div>
             </nav>

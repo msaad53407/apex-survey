@@ -31,7 +31,7 @@ const ContactUs = () => {
                     style={{ color: "white" }}
                     className="object-contain size-fit text-white"
                   />
-                  <p className="text-small text-white">{info.details}</p>
+                  <pre className="text-small text-white">{info.details}</pre>
                 </div>
               </div>
             ))}

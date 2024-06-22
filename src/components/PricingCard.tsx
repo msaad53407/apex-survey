@@ -5,8 +5,8 @@ import { prisma } from "../../lib/db";
 export async function PricingCard() {
   const pricing = await prisma.pricing.findMany({
     where: {
-      status: "enabled"
-    }
+      status: "enabled",
+    },
   });
 
   // Determine the width of each card based on the number of cards
@@ -22,9 +22,18 @@ export async function PricingCard() {
   }
 
   return (
-    <div className={`grid gap-4 w-full sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:${gridCols}`}>
+    <div
+      className={`grid gap-4 w-full sm:grid-cols-${
+        pricing.length <= 1 ? pricing.length : 1
+      } md:grid-cols-${pricing.length <= 3 ? pricing.length : 3} lg:grid-cols-${
+        pricing.length <= 4 ? pricing.length : 4
+      } xl:${gridCols}`}
+    >
       {pricing.map((pricingItem, index) => (
-        <Card key={index} className="w-full h-auto p-3 mx-auto lg:border-apex-grey-dark lg:border-t-apex-grey-light lg:border-t-[24px] rounded-xl">
+        <Card
+          key={index}
+          className="w-full h-auto p-3 mx-auto lg:border-apex-grey-dark lg:border-t-apex-grey-light lg:border-t-[24px] rounded-xl"
+        >
           <CardHeader className="text-center lg:border-t-apex-dark !p-0">
             <h3 className="text-2xl font-bold">{pricingItem.serviceName}</h3>
           </CardHeader>

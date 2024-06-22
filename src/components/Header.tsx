@@ -10,11 +10,9 @@ import {
 import Navbar from "./Navbar";
 import MobileNavbarMenu from "./MobileNavbarMenu";
 import { contactLinks, navLinks, servicesDropdownLinks } from "@/lib/constants";
-
+import { serviceCards } from "@/components/Services";
 
 const Header = () => {
-  
-
   return (
     <header className="flex flex-col w-full">
       <div className="flex flex-row w-full items-center justify-between px-4 lg:px-16 py-2 bg-apex-dark h-max">
@@ -49,7 +47,7 @@ const Header = () => {
         </div>
         <MobileNavbarMenu
           navLinks={navLinks}
-          serviceDropdownLinks={servicesDropdownLinks}
+          serviceDropdownLinks={serviceCards}
         />
       </div>
       <nav className="h-max bg-apex-grey-bluish hidden lg:flex flex-col md:flex-row items-center justify-between px-16 py-4 gap-4 sticky top-0 z-50">
@@ -66,10 +64,14 @@ const Header = () => {
               />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="rounded-sm w-max flex gap-2 flex-col">
-              {servicesDropdownLinks.map((link) => (
-                <Link href={link.path} key={link.path} className="hover:bg-apex-blue hover:text-white py-2 px-4">
+              {serviceCards.map(({ title, link }) => (
+                <Link
+                  href={`/services/${link}`}
+                  key={link}
+                  className="hover:bg-apex-blue hover:text-white py-2 px-4"
+                >
                   <div className="hover:bg-apex-blue hover:text-white cursor-pointer">
-                    {link.name}
+                    {title}
                   </div>
                 </Link>
               ))}

@@ -19,8 +19,10 @@ type MoblileNavbarMenuProps = {
     path: string;
   }[];
   serviceDropdownLinks: {
-    name: string;
-    path: string;
+    image: string;
+    title: string;
+    link: string;
+    description: string;
   }[];
 };
 
@@ -85,14 +87,14 @@ const MobileNavbarMenu = ({
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-4 my-6 ml-10">
-                  {serviceDropdownLinks.map((link) => (
+                  {serviceDropdownLinks.map(({ title, link }) => (
                     <Link
-                      href={link.path}
-                      key={link.path}
+                      href={`/services/${link}`}
+                      key={link}
                       onClick={() => setOpen(false)}
                     >
                       <p className="text-para font-normal text-black">
-                        {link.name.toUpperCase()}
+                        {title?.toUpperCase()}
                       </p>
                     </Link>
                   ))}

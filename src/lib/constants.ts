@@ -141,17 +141,22 @@ export const contactInformation = [
   {
     type: "Client Support",
     icon: "/icons/phone.svg",
-    details: "123-456-7890",
+    details: "004432412357",
   },
   {
     type: "Email",
     icon: "/icons/mail-white.svg",
-    details: "XsDfA@example.com",
+    details: "contact@fairdealelectrical.co.uk",
   },
   {
     type: "Main Office",
     icon: "/icons/mail-white.svg",
-    details: "123 Street, City, State, Zip",
+    details: `
+Fairdeal Electrical services Ltd
+47 Vicarage Lane
+Ilford
+IG1 4AG
+London`,
   },
 ];
 
@@ -240,13 +245,13 @@ export const servicesDropdownLinks = [
 ];
 export const contactLinks = [
   {
-    web_link: "info@apexsurveyors.org.pk",
-    web_text: "info@apexsurveyors.org.pk",
-    web_iconPath: "/icons/web.svg",
+    web_link: "contact@fairdealelectrical.co.uk",
+    web_text: "contact@fairdealelectrical.co.uk",
+    web_iconPath: "/icons/mail-white.svg",
   },
   {
-    phone_link: "0800 048 7474",
-    phone_text: "Call Us Free: +0800 048 7474",
+    phone_link: "004432412357",
+    phone_text: "Call Us Free: +004432412357",
     phone_iconPath: "/icons/phone.svg",
   },
 ];
@@ -754,7 +759,7 @@ export const footerNavLinks = [
   ...navLinks,
   {
     name: "Our Services",
-    path: "/our-services",
+    path: "/services",
   },
 ];
 
