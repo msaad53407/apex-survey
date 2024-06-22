@@ -17,7 +17,7 @@ const EnergyPerformanceCertificate = () => {
         <div className="flex flex-col gap-4">
           <h5 className="text-h5">Who Need Energy Performance Certificate</h5>
           <p className="text-para">
-            An Electrical Installation Condition Report (EICR), also known as an
+            An Electrical Performance Certificate (EPC), also known as an
             Electrical Safety Certificate, is typically required in various
             situations to ensure the safety and compliance of electrical
             installations. Here&apos;s who typically needs an EICR

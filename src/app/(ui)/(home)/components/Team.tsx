@@ -31,10 +31,10 @@ const teamCards = [
 
 const Team = () => {
   return (
-    <section className="px-7 lg:px-11 flex flex-col gap-6  max-w-screen-xl mx-auto" >
-      <div className="space-y-2 w-full md:w-1/2">
-        <h3 className="text-h3">Meat the Team</h3>
-        <p className="text-small font-medium">
+    <section className="px-7 lg:px-11 flex flex-col gap-8  max-w-screen-xl mx-auto">
+      <div className="space-y-2 w-full md:w-1/2 mx-auto">
+        <h3 className="text-h3 text-center">Meat the Team</h3>
+        <p className="text-small font-medium text-center">
           We are a team of building physicists and engineers, software
           developers, surveyors and business management specialists and for
           nearly 40 years we have been Making Buildings Better.
@@ -56,7 +56,9 @@ const Team = () => {
             />
             <div className="flex flex-col items-center w-max gap-2">
               <h5 className="text-btn">{member.name}</h5>
-              <p className="text-small font-medium text-wrap w-[70%] text-center">{member.position}</p>
+              <p className="text-small font-medium text-wrap w-[70%] text-center">
+                {member.position}
+              </p>
             </div>
           </article>
         ))}

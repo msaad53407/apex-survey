@@ -16,10 +16,9 @@ const TermsAndConditions = () => {
         <div className="w-full md:w-1/2 space-y-2">
           <h5 className="text-btn text-center">Terms and Conditions</h5>
           <p className="text-para text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            repellendus ipsam porro dolore illo quod, et, cumque doloremque,
-            officia nostrum totam veritatis voluptatum consequuntur eos id fuga
-            voluptates unde a.
+            These terms and conditions govern your use of our services. By
+            engaging our services, you agree to comply with and be bound by the
+            following terms.
           </p>
         </div>
         <div className="flex flex-col gap-4">
