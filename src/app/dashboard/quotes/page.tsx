@@ -14,8 +14,9 @@ import Link from "next/link";
 import LoadingBounce from "@/components/loading";
 import { update } from "@/lib/action";
 
-const Quotes = async () => {
+export const dynamic = "force-dynamic";
 
+const Quotes = async () => {
   const checkouts = await prisma.checkout.findMany({
     include: {
       quote: {
@@ -25,17 +26,18 @@ const Quotes = async () => {
       },
     },
     orderBy: {
-      createdAt: "desc"
-    }
-
+      createdAt: "desc",
+    },
   });
   const handleRefresh = async () => {
-    "use server"
+    "use server";
     update(["/quotes"]);
-  }
+  };
 
   const countCheckouts = checkouts.length.toString();
-  const pendingCheckouts = checkouts.filter(checkout => checkout.status === 'Pending');
+  const pendingCheckouts = checkouts.filter(
+    (checkout) => checkout.status === "Pending"
+  );
   const countPendingCheckouts = pendingCheckouts.length.toString();
 
   return (
@@ -47,13 +49,17 @@ const Quotes = async () => {
         </div>
         {/* <Link href={"/dashboard/quotes"}> */}
         <form>
-          <input type="submit" formAction={handleRefresh} id="button" className="hidden" />
+          <input
+            type="submit"
+            formAction={handleRefresh}
+            id="button"
+            className="hidden"
+          />
           <Button className="bg-gray-400 hover:bg-gray-400 px-8 py-2 text-btn text-black rounded-lg">
             Refresh
           </Button>
         </form>
         {/* </Link> */}
-
       </Card>
 
       <div className="flex gap-2">
@@ -104,7 +110,13 @@ const Quotes = async () => {
         </div>
       </div>
 
-      <Suspense fallback={<div><LoadingBounce /></div>}>
+      <Suspense
+        fallback={
+          <div>
+            <LoadingBounce />
+          </div>
+        }
+      >
         <DetailsTable checkouts={checkouts} countCheckouts={countCheckouts} />
       </Suspense>
     </div>
