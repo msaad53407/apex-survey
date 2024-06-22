@@ -7,7 +7,7 @@ import ServiceProcedure from "@/components/ServiceProcedure";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
-import { serviceCards } from "../../../../components/Services";
+import { serviceCards } from "@/components/Services";
 
 type ElectricalMaintenanceProps = {
   params: {
@@ -39,9 +39,7 @@ const ElectricalMaintenance = ({ params }: ElectricalMaintenanceProps) => {
           <div className="w-full lg:w-1/2 flex flex-col gap-4 justify-center">
             <div className="space-y-6">
               <h4 className="text-h4">{selectedService.title}</h4>
-              <p className="text-para">
-                {selectedService.description}
-              </p>
+              <p className="text-para">{selectedService.description}</p>
             </div>
             <InstantQuoteModal />
           </div>
