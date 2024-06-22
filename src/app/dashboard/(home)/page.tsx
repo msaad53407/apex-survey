@@ -4,6 +4,7 @@ import ViewChart from "../components/charts/ViewChart";
 import { Button } from "@/components/ui/button";
 import RevenueChart from "../components/charts/RevenueChart";
 import Link from "next/link";
+
 import DashboardReviewCard from "./components/DashboardReviewCard";
 import RadialProgress from "./components/RadialProgress";
 
@@ -20,7 +21,7 @@ const Dashboard = () => {
                 Total Properties for Survey
               </h5>
               <div className="flex gap-2 items-center">
-                <span className="bg-white rounded-md w-full h-2"></span>
+                <span className="bg-white rounded-md w-full h-2" />
                 <h5 className="text-btn text-white">4567</h5>
               </div>
               <p className="text-small text-white">
