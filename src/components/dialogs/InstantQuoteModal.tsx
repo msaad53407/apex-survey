@@ -28,6 +28,10 @@ import {
   SelectItem,
 } from "../ui/select";
 import { cn } from "@/lib/utils";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
+import Error from "../Error";
 
 export const propertyType = [
   {
@@ -48,13 +52,26 @@ const InstantQuoteModal = () => {
     resolver: zodResolver(InstantQuoteSchema),
   });
   const [subFields, setSubFields] = useState<string[]>([]);
+  const [loading, setLoading] = useState(false); // State for loading
+  const [hasSubmitted, setHasSubmitted] = useState(false); // State to track if the form has been
+  const router = useRouter();
 
-  function onSubmit(data: z.infer<typeof InstantQuoteSchema>) {
-    console.log(data);
-    alert(JSON.stringify(data, null, 2));
-    form.reset();
-    setSubFields([]);
-    setOpen(false);
+  async function onSubmit(data: z.infer<typeof InstantQuoteSchema>) {
+    try {
+      setLoading(true); // Set loading to true before API call
+      const response = await axios.post("/api/order", data);
+      const orderId = response.data.id;
+      form.reset();
+      setSubFields([]);
+      toast.success("Quote Added moving to Checkout");
+      router.push(`/checkout?orderId=${orderId}`);
+    } catch (error: any) {
+      console.error("Error submitting order:", error);
+      toast.error("Unsuccessful");
+    } finally {
+      setLoading(false); // Set loading to false after API call
+      setHasSubmitted(true); // Set hasSubmitted to true after form submission attempt
+    }
   }
 
   const handleChangeInPropertyType = (
@@ -192,6 +209,12 @@ const InstantQuoteModal = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form.watch("services")]);
 
+  const allErrors = () => {
+    return Object.values(form.formState.errors).map((error) => (
+      <Error key={error.message} message={error.message ?? ""} />
+    ));
+  };
+
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
@@ -322,12 +345,29 @@ const InstantQuoteModal = () => {
                 </>
               );
             })}
+          {hasSubmitted && allErrors()}{" "}
+          {/* Show all errors above the button after form submission attempt */}
           {form.watch("propertyType") && form.watch("services") && (
             <Button
               type="submit"
-              className="w-full text-white p-2 bg-apex-blue hover:bg-apex-blue"
+              className="w-full text-white p-2 bg-apex-blue hover:bg-apex-blue relative"
+              disabled={loading} // Disable button while loading
+              onClick={() => {
+                setHasSubmitted(true);
+              }}
             >
-              Place Order
+              {loading && ( // Show loader if loading is true
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="flex flex-row gap-2">
+                    <div className="w-4 h-4 rounded-full bg-blue-700 animate-bounce" />
+                    <div className="w-4 h-4 rounded-full bg-blue-700 animate-bounce [animation-delay:-.3s]" />
+                    <div className="w-4 h-4 rounded-full bg-blue-700 animate-bounce [animation-delay:-.5s]" />
+                  </div>
+                </div>
+              )}
+              <span className={loading ? "opacity-0" : "opacity-100"}>
+                Place Order
+              </span>
             </Button>
           )}
         </form>
