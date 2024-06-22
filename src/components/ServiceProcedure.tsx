@@ -28,9 +28,8 @@ const ServiceProcedure = () => {
       <div className="w-full lg:w-4/6 space-y-2 flex flex-col items-center justify-center self-center">
         <h3 className="text-h3 text-center">Four Steps to Get Our Services</h3>
         <p className="text-para text-center">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-          voluptate sint eaque ratione error saepe facere? Officia expedita
-          deserunt nam?
+          Follow these simple steps to easily obtain our services, ensuring a
+          seamless and efficient process from start to finish.
         </p>
       </div>
       <div

@@ -3,7 +3,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="px-7 lg:px-11 flex flex-col lg:justify-between lg:flex-row gap-4 my-10 max-w-screen-xl mx-auto">
+    <section
+      className="px-7 lg:px-11 flex flex-col lg:justify-between lg:flex-row gap-4 my-10 max-w-screen-xl mx-auto"
+      id="about"
+    >
       <div className="w-full lg:w-[45%] flex items-center justify-center">
         <Image
           src={"/About-us-image.png"}
@@ -22,8 +25,8 @@ const About = () => {
               We offer top-tier land surveying and digital mapping services
             </h4>
             <p className="text-para">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
-              dolor similique doloremque?
+              With years of experience, Apex Survey delivers high-quality land
+              surveying and digital mapping services
             </p>
           </div>
           <ul className="flex flex-row gap-4 justify-between">
@@ -38,8 +41,8 @@ const About = () => {
               <div className="flex flex-col gap-2">
                 <h5 className="text-btn">Best Quality Service</h5>
                 <p className="text-para">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                  velit.
+                  We deliver exceptional quality in every project, ensuring all
+                  measurements and data are precise and reliable
                 </p>
               </div>
             </li>
@@ -54,8 +57,9 @@ const About = () => {
               <div className="flex flex-col gap-2">
                 <h5 className="text-btn">Affordable Prices</h5>
                 <p className="text-para">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                  velit.
+                  Our services are priced competitively to offer the best value
+                  without compromising on quality. Get premium service at
+                  affordable rates.
                 </p>
               </div>
             </li>
@@ -64,10 +68,12 @@ const About = () => {
         <div className="rounded-sm flex flex-col justify-center bg-gray-200 px-8 py-4 relative border-l-4 border-l-apex-blue min-h-32 w-full md:w-auto">
           <div className="w-3/4 flex flex-col gap-1">
             <p className="text-para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-              nobis?
+              {`"Apex Survey exceeded my expectations with their professionalism
+              and accuracy. Highly recommend their services!"`}
             </p>
-            <h5 className="text-para font-bold lg:text-btn ">Zander Jones - Apex Survey</h5>
+            <h5 className="text-para font-bold lg:text-btn ">
+              Zander Jones - Apex Survey
+            </h5>
           </div>
           <div className="flex items-center justify-center size-10 absolute bottom-6 right-6">
             <Image

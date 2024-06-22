@@ -15,10 +15,8 @@ const Faqs = () => {
         <div className="w-full lg:w-1/2 space-y-2 lg:px-11 px-7">
           <h5 className="text-h5 text-center">Frequently Asked Questions</h5>
           <p className="text-para text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            repellendus ipsam porro dolore illo quod, et, cumque doloremque,
-            officia nostrum totam veritatis voluptatum consequuntur eos id fuga
-            voluptates unde a.
+            Below are some of the most asked questions. If you have any more
+            question, fell free to reach out to us.
           </p>
         </div>
         <FaqsAccordian />

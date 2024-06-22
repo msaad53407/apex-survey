@@ -14,12 +14,12 @@ const faqs = [
     question: "Is it accessible?",
     answer: (
       <div className="w-full flex flex-col gap-2">
-        <h6 className="text-btn text-apex-blue">
-          What type of surveying services do you offer?
-        </h6>
         <p className="text-para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sit
-          voluptates reiciendis.
+          Yes, our services are accessible to a wide range of clients. We ensure
+          that our technology and processes are user-friendly and compliant with
+          accessibility standards. This includes providing accommodations for
+          individuals with disabilities and ensuring our online platforms are
+          easily navigable.
         </p>
       </div>
     ),
@@ -28,12 +28,13 @@ const faqs = [
     question: "What is the process?",
     answer: (
       <div className="w-full flex flex-col gap-2">
-        <h6 className="text-btn text-apex-blue">
-          What type of surveying services do you offer?
-        </h6>
         <p className="text-para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sit
-          voluptates reiciendis.
+          The process starts with an initial consultation where we understand
+          your requirements and objectives. This is followed by a site visit for
+          preliminary assessment. We then conduct detailed surveying using the
+          latest technology. Once the data is collected, our team analyzes it
+          and prepares a comprehensive report, which is delivered to you along
+          with recommendations.
         </p>
       </div>
     ),
@@ -42,12 +43,12 @@ const faqs = [
     question: "Do you have a team?",
     answer: (
       <div className="w-full flex flex-col gap-2">
-        <h6 className="text-btn text-apex-blue">
-          What type of surveying services do you offer?
-        </h6>
         <p className="text-para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sit
-          voluptates reiciendis.
+          Yes, we have a dedicated team of experienced professionals. Our team
+          includes licensed surveyors, engineers, and technical experts who are
+          well-versed in the latest surveying techniques and technologies. They
+          work collaboratively to ensure that each project is completed
+          accurately and efficiently.
         </p>
       </div>
     ),
@@ -56,12 +57,12 @@ const faqs = [
     question: "Can I request Additional Services?",
     answer: (
       <div className="w-full flex flex-col gap-2">
-        <h6 className="text-btn text-apex-blue">
-          What type of surveying services do you offer?
-        </h6>
         <p className="text-para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sit
-          voluptates reiciendis.
+          Absolutely. In addition to our standard surveying services, we offer a
+          range of additional services to meet your specific needs. These
+          include topographic surveys, construction staking, boundary surveys,
+          and more. You can discuss your requirements with our team, and we will
+          tailor our services accordingly.
         </p>
       </div>
     ),

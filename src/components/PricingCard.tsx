@@ -10,7 +10,7 @@ export async function PricingCard() {
   });
 
   // Determine the width of each card based on the number of cards
-  let gridCols;
+  let gridCols: string | null = null;
   if (pricing.length === 1) {
     gridCols = "grid-cols-1";
   } else if (pricing.length === 2) {

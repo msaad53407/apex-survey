@@ -19,9 +19,8 @@ const EmailNewsLetter = () => {
           Subscribe and Get More Information
         </h5>
         <p className="text-small text-white">
-          Lorem ipsum dolor sit amet consectetur. Dapibus maecenas rutrum
-          lobortis maecenas at. Eu nec eget habitant a at ut gravida auctor
-          tellus. At donec purus justo blandit at et nisl.{" "}
+          Subscribe now to receive the latest news, updates, and special
+          offers straight to your inbox
         </p>
       </div>
       <form

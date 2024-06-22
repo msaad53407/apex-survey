@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -31,12 +32,14 @@ export default function Hero() {
                   From residential dreams to commercial endeavors, we deliver
                   precise assessments tailored to your needs.
                 </p>
-                <Button
-                  className="bg-apex-blue w-max px-10 py-2 text-btn text-white hover:bg-apex-blue"
-                  variant="default"
-                >
-                  Learn More
-                </Button>
+                <Link href="#about" className="w-fit">
+                  <Button
+                    className="bg-apex-blue w-max px-10 py-2 text-btn text-white hover:bg-apex-blue"
+                    variant="default"
+                  >
+                    Learn More
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="relative z-10 -bottom-10 lg:absolute lg:right-0 lg:-bottom-24 2xl:-right-20">
@@ -109,7 +112,8 @@ export default function Hero() {
               <div className="ml-4">
                 <h4 className="text-btn">Accurate Survey</h4>
                 <p className="text-para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  Our team ensures precise and accurate surveys using the latest
+                  technology and methods. Trust us for reliable data every time
                 </p>
               </div>
             </div>
@@ -124,7 +128,8 @@ export default function Hero() {
               <div className="ml-4">
                 <h4 className="text-btn">Best Service</h4>
                 <p className="text-para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  We pride ourselves on providing top-notch customer service.
+                  Our dedicated team is here to support you at every step
                 </p>
               </div>
             </div>

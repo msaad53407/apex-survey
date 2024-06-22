@@ -14,10 +14,10 @@ export default function Footer() {
               </h4>
             </Link>
             <p className="text-para text-white">
-              Lorem ipsum dolor sit amet consectetur. Dui viverra nullam mauris
-              enim tincidunt amet et quam. Sit nunc natoque vitae magnis quis
-              sit vulputate diam. Pellentesque urna ullamcorper at vulputate leo
-              dui id.{" "}
+              At ApexSurvey, we are dedicated to providing high-quality land
+              surveying and digital mapping services. Our experienced team uses
+              state-of-the-art technology to ensure precision and accuracy in
+              every project.{" "}
             </p>
           </div>
           <div className="flex flex-1 lg:flex-row flex-col justify-between lg:justify-evenly gap-10">
@@ -49,8 +49,9 @@ export default function Footer() {
               <div className="flex flex-col gap-6">
                 <h5 className="text-btn text-white">Make an Appointment</h5>
                 <p className="text-para text-white w-fit">
-                  Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do
-                  eiusmod tempor incididunt labor
+                  Contact us today to schedule your land survey or digital
+                  mapping service. Our friendly and knowledgeable staff are
+                  ready to assist you with all your surveying needs
                 </p>
               </div>
               <div className="flex gap-4">
@@ -72,7 +73,8 @@ export default function Footer() {
         </div>
         <div className="flex w-full flex-col lg:flex-row items-center justify-between lg:justify-end gap-6 lg:gap-64">
           <p className="text-small text-center md:text-start order-last lg:order-first md:text-para lg:text-btn text-white">
-            Copyright © 2024 ApexSurvey. All Rights Reserved.
+            Copyright © {new Date().getFullYear()} ApexSurvey. All Rights
+            Reserved.
           </p>
           <div className="flex lg:hidden flex-col gap-4 items-center">
             <div className="flex items-center gap-4">

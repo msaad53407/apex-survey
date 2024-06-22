@@ -8,8 +8,11 @@ import {
 } from "./ui/card";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { reviewData } from "@/lib/constants";
 
 const Reviews = () => {
+  const reviewArray1 = reviewData.slice(0, 2);
+  const reviewArray2 = reviewData.slice(2, 4);
   return (
     <section className="px-7 lg:px-11 flex flex-col gap-8  max-w-screen-xl mx-auto">
       <div className="space-y-2 w-full md:w-1/2 mx-auto">
@@ -23,17 +26,25 @@ const Reviews = () => {
 
       <div className="flex flex-row gap-2">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 grid-row min-h-96 mb-12 lg:mb-0">
-          {new Array<number>(2).fill(0).map((_, index) => (
+          {reviewArray1.map(({ name, description, date, image }, index) => (
             <ReviewCard
               key={index}
+              title={name}
+              details={description}
+              date={date}
+              image={image}
               className={index % 2 == 0 ? "self-start" : "self-end"}
             />
           ))}
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-12 lg:mt-0 gap-2 grid-row min-h-96">
-          {new Array<number>(2).fill(0).map((_, index) => (
+          {reviewArray2.map(({ name, description, date, image }, index) => (
             <ReviewCard
               key={index}
+              title={name}
+              details={description}
+              date={date}
+              image={image}
               className={index % 2 == 0 ? "self-start" : "self-end"}
             />
           ))}
@@ -45,20 +56,32 @@ const Reviews = () => {
 
 export default Reviews;
 
-export const ReviewCard = ({ className }: { className?: string }) => {
+export const ReviewCard = ({
+  title,
+  details,
+  date,
+  image,
+  className,
+}: {
+  title: string;
+  details: string;
+  date: string;
+  image: string;
+  className?: string;
+}) => {
   return (
     <Card className={cn("p-0 shadow-lg border-0", className)}>
       <CardHeader className="p-3 lg:p-6">
         <div className="size-14 flex items-center justify-center">
           <Image
-            src={"/Review-card.png"}
+            src={image}
             alt="Review Card"
             width={100}
             height={100}
-            className="object-contain size-full"
+            className="object-cover size-full rounded-full"
           />
         </div>
-        <h4 className="text-btn text-apex-blue">Glyden Hykens</h4>
+        <h4 className="text-btn text-apex-blue">{title}</h4>
         <Image
           src={"/icons/review-stars.svg"}
           alt="Review Stars"
@@ -68,15 +91,10 @@ export const ReviewCard = ({ className }: { className?: string }) => {
         />
       </CardHeader>
       <CardContent className="p-3 lg:p-6">
-        <p className="text-small text-apex-grey-dark">
-          “Lorem ipsum dolor sit amet consectetur. Iaculis in ut porttitor
-          vivamus et. Quis sem sit posuere egestas amet.
-        </p>
+        <p className="text-small text-apex-grey-dark">{details}</p>
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row gap-2 items-center justify-between w-full p-3 lg:p-6 pt-0">
-        <p className="text-small self-start">
-          {new Date().toLocaleDateString()}
-        </p>
+        <p className="text-small self-start">{date}</p>
         <div className="flex flex-row gap-2 items-center self-end">
           <Image
             src={"/icons/check-icon.svg"}
