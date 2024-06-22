@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { PricingCard } from "@/components/PricingCard";
 import Hero from "./components/Hero";
-import Services from "../../../components/Services";
+import Services from "./components/Services";
 import About from "./components/About";
 import Team from "./components/Team";
 import Reviews from "@/components/Reviews";

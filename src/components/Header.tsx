@@ -10,7 +10,7 @@ import {
 import Navbar from "./Navbar";
 import MobileNavbarMenu from "./MobileNavbarMenu";
 import { contactLinks, navLinks, servicesDropdownLinks } from "@/lib/constants";
-import { serviceCards } from "@/components/Services";
+import { serviceCards } from "./Services";
 
 const Header = () => {
   return (

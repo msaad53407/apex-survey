@@ -23,11 +23,7 @@ export async function PricingCard() {
 
   return (
     <div
-      className={`grid gap-4 w-full sm:grid-cols-${
-        pricing.length <= 1 ? pricing.length : 1
-      } md:grid-cols-${pricing.length <= 3 ? pricing.length : 3} lg:grid-cols-${
-        pricing.length <= 4 ? pricing.length : 4
-      } xl:${gridCols}`}
+      className={`grid gap-4 w-full sm:grid-cols-1 md:grid-cols-3 lg:${gridCols} xl:${gridCols}`}
     >
       {pricing.map((pricingItem, index) => (
         <Card
