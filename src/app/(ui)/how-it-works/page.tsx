@@ -1,9 +1,14 @@
 import Banner from "@/components/Banner";
 import { serviceSteps } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "How it Works - Fairdeal Electrical",
+};
 
 const HowItWorks = () => {
   return (

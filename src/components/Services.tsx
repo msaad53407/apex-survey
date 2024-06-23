@@ -49,19 +49,19 @@ export const serviceCards = [
 
 const Services = () => {
   return (
-    <section className="px-7 lg:px-10 flex flex-col gap-4 mb-auto lg:mb-20 max-w-screen-xl mx-auto">
+    <section className="px-7 lg:px-10 flex flex-col gap-4 mb-20 max-w-screen-xl mx-auto">
       <div className="space-y-1">
         <p className="text-para">Popular Services</p>
         <h3 className="text-h4 lg:text-h3">What Services We Offer</h3>
       </div>
-      <div className="flex flex-row flex-wrap gap-x-4 gap-y-0 lg:gap-y-20 justify-center ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-20 justify-center">
         {serviceCards.map((card, index) => (
           <Link
             key={index}
             href={`/services/${card.link}`}
-            className="flex flex-col items-center relative gap-4 mb-20 lg:mb-auto justify-center lg:justify-between flex-nowrap w-full sm:w-[48%] lg:w-[24%]"
+            className="flex flex-col items-center relative gap-4 mb-20 lg:mb-auto justify-center lg:justify-between flex-nowrap w-full max-h-full h-full"
           >
-            <div className="flex items-center justify-center w-full">
+            <div className="flex items-center justify-center w-full h-full">
               <Image
                 src={card.image}
                 alt={card.title}
@@ -70,7 +70,7 @@ const Services = () => {
                 className="object-cover size-full"
               />
             </div>
-            <div className="bg-black p-2 lg:p-4 lg:pb-5 absolute -bottom-14 w-[90%] mx-auto h-max min-h-20 flex items-center gap-2 justify-center">
+            <div className="bg-black p-2 lg:p-4 lg:pb-5 absolute -bottom-10 lg:-bottom-14 w-[90%] mx-auto h-max min-h-16 lg:min-h-24 flex items-center justify-center">
               <h5 className="text-small text-wrap sm:w-full w-[85%] font-semibold lg:text-btn text-center text-white">
                 {card.title}
               </h5>

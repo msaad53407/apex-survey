@@ -32,6 +32,11 @@ import type { z } from "zod";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import Error from "@/components/Error";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Order Now - Fairdeal Electrical",
+};
 
 const OrderNow = () => {
   const router = useRouter();
@@ -62,15 +67,24 @@ const OrderNow = () => {
     }
   }
 
-  const handleChangeInPropertyType = (checked: CheckedState, itemId: string) => {
+  const handleChangeInPropertyType = (
+    checked: CheckedState,
+    itemId: string
+  ) => {
     if (checked) {
-      form.setValue("propertyType", itemId as z.infer<typeof InstantQuoteSchema>["propertyType"]);
+      form.setValue(
+        "propertyType",
+        itemId as z.infer<typeof InstantQuoteSchema>["propertyType"]
+      );
       setSubFields([]);
       form.setValue("services", []);
     }
   };
 
-  const handleChangeInService = (checked: CheckedState, item: z.infer<typeof InstantQuoteSchema>["services"][number]) => {
+  const handleChangeInService = (
+    checked: CheckedState,
+    item: z.infer<typeof InstantQuoteSchema>["services"][number]
+  ) => {
     if (checked) {
       form.setValue(
         "services",
@@ -203,7 +217,9 @@ const OrderNow = () => {
         </Label>
         <div className="space-y-2">
           {form.getFieldState("propertyType").error && (
-            <Error message={form.getFieldState("propertyType").error?.message ?? ""} />
+            <Error
+              message={form.getFieldState("propertyType").error?.message ?? ""}
+            />
           )}
           {form.formState.errors.propertyType && (
             <Error message={form.formState.errors.propertyType.message ?? ""} />
@@ -225,7 +241,9 @@ const OrderNow = () => {
                   htmlFor={item.id}
                 >
                   {item.icon}
-                  <h5 className="text-para sm:text-h5 font-bold">{item.label}</h5>
+                  <h5 className="text-para sm:text-h5 font-bold">
+                    {item.label}
+                  </h5>
                   <p className="text-small">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Quidem aut incidunt officiis ipsum pariatur nihil delectus
@@ -249,7 +267,9 @@ const OrderNow = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
               {services
                 .filter((service) =>
-                  service.servicePropertyType.includes(form.watch("propertyType"))
+                  service.servicePropertyType.includes(
+                    form.watch("propertyType")
+                  )
                 )
                 .map((item) => (
                   <Checkbox
@@ -289,12 +309,15 @@ const OrderNow = () => {
                 </Label>
                 <div className="space-y-2">
                   {form.getFieldState(item.id).error && (
-                    <Error message={form.getFieldState(item.id).error?.message ?? ""} />
+                    <Error
+                      message={form.getFieldState(item.id).error?.message ?? ""}
+                    />
                   )}
                   <div
                     className={cn(
                       "grid gap-4 w-full",
-                      item.fieldType === "counter" || item.fieldType === "dropdown"
+                      item.fieldType === "counter" ||
+                        item.fieldType === "dropdown"
                         ? "grid-cols-1"
                         : "grid-cols-1 md:grid-cols-2"
                     )}
@@ -307,13 +330,16 @@ const OrderNow = () => {
             </React.Fragment>
           );
         })}
-      {hasSubmitted && allErrors()} {/* Show all errors above the button after form submission attempt */}
+      {hasSubmitted && allErrors()}{" "}
+      {/* Show all errors above the button after form submission attempt */}
       {form.watch("propertyType") && form.watch("services") && (
         <Button
           type="submit"
           className="w-full text-white p-2 bg-apex-blue hover:bg-apex-blue relative"
           disabled={loading} // Disable button while loading
-          onClick={() => { setHasSubmitted(true); }}
+          onClick={() => {
+            setHasSubmitted(true);
+          }}
         >
           {loading && ( // Show loader if loading is true
             <div className="absolute inset-0 flex items-center justify-center">

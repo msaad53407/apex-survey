@@ -18,20 +18,25 @@ import { cn } from "@/lib/utils";
 import ContactAccess from "./components/ContactAccess";
 import { checkoutSchema } from "@/lib/schema";
 import axios from "axios";
-import toast, { Toaster } from 'react-hot-toast';
-import { useRouter } from 'next/navigation';
-import { useSearchParams } from 'next/navigation';
+import toast, { Toaster } from "react-hot-toast";
+import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Checkout - Fairdeal Electrical",
+};
 
 const CheckoutContent = () => {
-  const route = useRouter()
+  const route = useRouter();
   const searchParams = useSearchParams();
   const [loading, setLoading] = useState(false);
 
-  const orderId = searchParams.get('orderId');
+  const orderId = searchParams.get("orderId");
   if (orderId == null) {
-    toast.error("Please add quote first")
-    route.push('/order-now')
+    toast.error("Please add quote first");
+    route.push("/order-now");
   }
   const form = useForm<z.infer<typeof checkoutSchema>>({
     resolver: zodResolver(checkoutSchema),
@@ -42,7 +47,9 @@ const CheckoutContent = () => {
       },
     },
   });
-  const [paymentMethod, setPaymentMethod] = React.useState<"card" | "bank">("card");
+  const [paymentMethod, setPaymentMethod] = React.useState<"card" | "bank">(
+    "card"
+  );
 
   const submitHandler = async (data: z.infer<typeof checkoutSchema>) => {
     try {
@@ -53,11 +60,10 @@ const CheckoutContent = () => {
 
       toast.success("Successfully Ordered");
       form.reset();
-      route.push("/")
+      route.push("/");
     } catch (error: any) {
       toast.error("Something went wrong");
-    }
-    finally {
+    } finally {
       setLoading(false); // Set loading to false after API call
     }
   };
@@ -66,7 +72,10 @@ const CheckoutContent = () => {
     <div className="lg:px-11 px-7 py-4  max-w-screen-xl mx-auto">
       <h5 className="text-h5">Check out</h5>
       <section className="w-full lg:w-2/3 my-8 mx-auto flex flex-col gap-4">
-        <Heading primaryHeading="Your Property and Services" secondaryHeading="Price" />
+        <Heading
+          primaryHeading="Your Property and Services"
+          secondaryHeading="Price"
+        />
         <div className="flex flex-col gap-4 py-2 px-4 bg-gray-200">
           <div className="flex flex-row items-center justify-between">
             <p className="text-para">your@gmail.com</p>
@@ -96,20 +105,31 @@ const CheckoutContent = () => {
           className="w-full px-6"
         >
           <div className="flex items-center space-x-2">
-            <RadioGroupItem value="card" id="card-payment" className="border-gray-200" />
+            <RadioGroupItem
+              value="card"
+              id="card-payment"
+              className="border-gray-200"
+            />
             <Label htmlFor="card-payment" className="!text-para">
               Payment by Debit Card
             </Label>
           </div>
           <div className="flex items-center space-x-2">
-            <RadioGroupItem value="bank" id="bank-transfer" className="border-gray-200" />
+            <RadioGroupItem
+              value="bank"
+              id="bank-transfer"
+              className="border-gray-200"
+            />
             <Label htmlFor="bank-transfer" className="!text-para">
               Payment by Bank Transfer
             </Label>
           </div>
         </RadioGroup>
         <Heading primaryHeading="Client Details" />
-        <form onSubmit={form.handleSubmit(submitHandler)} className="w-full flex lg:flex-row flex-col gap-4">
+        <form
+          onSubmit={form.handleSubmit(submitHandler)}
+          className="w-full flex lg:flex-row flex-col gap-4"
+        >
           <fieldset className="w-full lg:w-1/2 flex flex-col gap-4">
             <div className="space-y-2">
               <Label htmlFor="fullName" className="!text-para">
@@ -118,7 +138,9 @@ const CheckoutContent = () => {
               <Input
                 id="fullName"
                 {...form.register("fullName")}
-                className={cn(form.formState.errors.fullName ? "!border-red-500" : "")}
+                className={cn(
+                  form.formState.errors.fullName ? "!border-red-500" : ""
+                )}
                 placeholder="John Doe"
               />
               {form.formState.errors.fullName && (
@@ -132,7 +154,9 @@ const CheckoutContent = () => {
               <Input
                 id="email"
                 {...form.register("email")}
-                className={cn(form.formState.errors.email ? "!border-red-500" : "")}
+                className={cn(
+                  form.formState.errors.email ? "!border-red-500" : ""
+                )}
                 placeholder="Email Address"
               />
               {form.formState.errors.email && (
@@ -147,7 +171,9 @@ const CheckoutContent = () => {
                 id="postCode"
                 {...form.register("postCode")}
                 placeholder="Post Code"
-                className={cn(form.formState.errors.postCode ? "!border-red-500" : "")}
+                className={cn(
+                  form.formState.errors.postCode ? "!border-red-500" : ""
+                )}
               />
               {form.formState.errors.postCode && (
                 <Error message={form.formState.errors.postCode.message ?? ""} />
@@ -161,7 +187,9 @@ const CheckoutContent = () => {
                 id="address"
                 {...form.register("address")}
                 placeholder="House number and Street number"
-                className={cn(form.formState.errors.address ? "!border-red-500" : "")}
+                className={cn(
+                  form.formState.errors.address ? "!border-red-500" : ""
+                )}
               />
               {form.formState.errors.address && (
                 <Error message={form.formState.errors.address.message ?? ""} />
@@ -175,7 +203,9 @@ const CheckoutContent = () => {
                 id="phone"
                 {...form.register("phone")}
                 placeholder="Phone"
-                className={cn(form.formState.errors.phone ? "!border-red-500" : "")}
+                className={cn(
+                  form.formState.errors.phone ? "!border-red-500" : ""
+                )}
               />
               {form.formState.errors.phone && (
                 <Error message={form.formState.errors.phone.message ?? ""} />
@@ -190,7 +220,9 @@ const CheckoutContent = () => {
             )}
             <div className="space-y-4">
               <p className="text-para">
-                Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.
+                Your personal data will be used to process your order, support
+                your experience throughout this website, and for other purposes
+                described in our privacy policy.
               </p>
               <div className="flex items-center w-full gap-4">
                 <Checkbox
@@ -209,11 +241,15 @@ const CheckoutContent = () => {
                   )}
                 />
                 <Label htmlFor="tos" className="!text-para">
-                  I accept the <span className="font-semibold">terms and conditions</span>
+                  I accept the{" "}
+                  <span className="font-semibold">terms and conditions</span>
                 </Label>
               </div>
               {form.formState.errors.acceptTos && (
-                <Error message={form.formState.errors.acceptTos.message ?? ""} className="block w-full" />
+                <Error
+                  message={form.formState.errors.acceptTos.message ?? ""}
+                  className="block w-full"
+                />
               )}
               <Button
                 className="text-btn p-2 text-white bg-apex-blue hover:bg-apex-blue w-full text-center relative"

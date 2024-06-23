@@ -3,6 +3,11 @@ import EmailNewsLetter from "@/components/EmailNewsLetter";
 import ServiceProcedure from "@/components/ServiceProcedure";
 import React from "react";
 import FaqsAccordian from "./components/FaqsAccordian";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FAQs - Fairdeal Electrical",
+};
 
 const Faqs = () => {
   return (

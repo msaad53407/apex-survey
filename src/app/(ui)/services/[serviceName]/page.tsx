@@ -8,6 +8,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
 import { serviceCards } from "@/components/Services";
+import Head from "next/head";
 
 type ElectricalMaintenanceProps = {
   params: {
@@ -16,8 +17,6 @@ type ElectricalMaintenanceProps = {
 };
 
 const ElectricalMaintenance = ({ params }: ElectricalMaintenanceProps) => {
-  console.log(params);
-
   const selectedService = serviceCards.find(
     (service) => service.link === params.serviceName
   );
@@ -26,6 +25,9 @@ const ElectricalMaintenance = ({ params }: ElectricalMaintenanceProps) => {
 
   return (
     <>
+      <Head>
+        <title>Hello World</title>
+      </Head>
       <Banner
         image="/banner-image.png"
         className="size-full items-center justify-center inset-0 mx-auto"

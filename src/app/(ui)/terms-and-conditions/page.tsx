@@ -1,7 +1,12 @@
 import Banner from "@/components/Banner";
 import { termsAndConditions } from "@/lib/constants";
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions - Fairdeal Electrical",
+};
 
 const TermsAndConditions = () => {
   return (

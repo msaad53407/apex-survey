@@ -1,6 +1,11 @@
 import Banner from "@/components/Banner";
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Energy Performance Certificate - Fairdeal Electrical",
+};
 
 const EnergyPerformanceCertificate = () => {
   return (

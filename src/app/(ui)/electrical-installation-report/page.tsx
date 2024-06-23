@@ -1,6 +1,11 @@
 import Banner from "@/components/Banner";
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Electrical Installation Report - Fairdeal Electrical",
+};
 
 const ElectricalInstallationReport = () => {
   return (

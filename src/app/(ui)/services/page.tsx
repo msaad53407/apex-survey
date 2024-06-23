@@ -3,7 +3,12 @@ import EmailNewsLetter from "@/components/EmailNewsLetter";
 import Reviews from "@/components/Reviews";
 import ServiceProcedure from "@/components/ServiceProcedure";
 import Services from "@/components/Services";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Our Services - Fairdeal Electrical",
+};
 
 const ServicesPage = () => {
   return (

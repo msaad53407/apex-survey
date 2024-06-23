@@ -4,6 +4,11 @@ import React from "react";
 import { ProblemForm } from "./components/ProblemForm";
 
 import { contactInformation } from "@/lib/constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us - Fairdeal Electrical",
+};
 
 const ContactUs = () => {
   return (
