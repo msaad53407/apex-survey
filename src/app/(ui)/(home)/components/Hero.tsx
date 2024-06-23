@@ -20,14 +20,10 @@ export default function Hero() {
           </div>
           <div className="relative w-full px-6 lg:px-8 max-w-screen-xl xl:mx-auto">
             <div className="flex justify-between items-center py-6 lg:py-20 lg:flex-row flex-col-reverse">
-              <div className="flex flex-col space-y-6 w-full lg:w-2/5 2xl:w-1/2">
+              <div className="flex flex-col space-y-6 w-full lg:w-[35%] 2xl:w-1/2">
                 <h3 className="text-h4 lg:text-h3 text-white">
-                  Empowering Your Property Journey with Insightful Surveys
+                  Empowering Your Property Journey with safe electrical systems
                 </h3>
-                <h5 className="text-h5 text-white">
-                  From Only £79*
-                  <br />
-                </h5>
                 <p className="text-para text-white w-3/4">
                   From residential dreams to commercial endeavors, we deliver
                   precise assessments tailored to your needs.

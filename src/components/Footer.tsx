@@ -11,6 +11,9 @@ export default function Footer() {
   const phoneNumber = contactInformation.filter((contact) =>
     contact.icon.includes("phone")
   )[0].details;
+  const email = contactInformation.filter((contact) => 
+    contact.type === "Email"
+  )[0].details;
   return (
     <footer className="bg-apex-dark w-full px-8 py-3 lg:px-16 lg:py-6">
       <div className="flex flex-col gap-12 max-w-screen-xl mx-auto">
@@ -93,7 +96,7 @@ export default function Footer() {
                 height={12}
                 className="object-contain size-fit text-white"
               />
-              <p className="text-para text-white">info@Fairdeal.org.pk</p>
+              <p className="text-para text-white">{email}</p>
             </div>
             <div className="flex items-center gap-4">
               <Image
@@ -103,7 +106,7 @@ export default function Footer() {
                 height={12}
                 className="object-contain size-fit text-white"
               />
-              <p className="text-para text-white">Call Us Free:0800 048 7474</p>
+              <p className="text-para text-white">Call Us Free:{phoneNumber}</p>
             </div>
           </div>
           <div className="w-max flex gap-4 items-center self-center md:self-auto order-first lg:order-last">
