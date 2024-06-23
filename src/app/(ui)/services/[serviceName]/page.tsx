@@ -1,7 +1,6 @@
 import Banner from "@/components/Banner";
 import InstantQuoteModal from "@/components/dialogs/InstantQuoteModal";
 import EmailNewsLetter from "@/components/EmailNewsLetter";
-import { PricingCard } from "@/components/PricingCard";
 import Reviews from "@/components/Reviews";
 import ServiceProcedure from "@/components/ServiceProcedure";
 import Image from "next/image";
@@ -54,15 +53,6 @@ const ElectricalMaintenance = ({ params }: ElectricalMaintenanceProps) => {
               quality={100}
               className="object-cover size-full"
             />
-          </div>
-        </div>
-        <div className="px-7 lg:px-11 flex flex-col gap-4 mb-4">
-          <div>
-            <p className="text-para">Pricing</p>
-            <h3 className="text-h3">Prices of Services We Offer</h3>
-          </div>
-          <div className="flex flex-wrap flex-row gap-2">
-            <PricingCard />
           </div>
         </div>
         <Reviews />

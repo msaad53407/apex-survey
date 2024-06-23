@@ -55,7 +55,7 @@ const ServiceProcedure = () => {
                 className="object-contain size-full"
               />
             </div>
-            <h5 className="text-h5 text-center">{step.heading}</h5>
+            <h5 className="text-h5 text-center min-h-14">{step.heading}</h5>
             <p className="text-para text-center">{step.description}</p>
             {/*Write logic So that If index becomes equal to the length, then donot show arrow for that iteration and forward. */}
 

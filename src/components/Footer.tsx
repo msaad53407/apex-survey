@@ -11,24 +11,28 @@ export default function Footer() {
   const phoneNumber = contactInformation.filter((contact) =>
     contact.icon.includes("phone")
   )[0].details;
-  const email = contactInformation.filter((contact) => 
-    contact.type === "Email"
+  const email = contactInformation.filter(
+    (contact) => contact.type === "Email"
   )[0].details;
   return (
     <footer className="bg-apex-dark w-full px-8 py-3 lg:px-16 lg:py-6">
       <div className="flex flex-col gap-12 max-w-screen-xl mx-auto">
         <div className="flex flex-col lg:flex-row justify-between gap-y-6">
-          <div className="flex flex-col gap-4 w-full lg:w-min">
-            <Link href="/">
-              <h4 className="text-h4 text-white">
-                Fair<span className="text-apex-blue">deal</span>
-              </h4>
+          <div className="flex flex-col gap-4 w-full lg:w-32 xl:w-40 py-4">
+            <Link href="/" className="flex items-center justify-center w-1/2 mx-auto">
+              <Image
+                src={"/logo.png"}
+                alt="Logo"
+                width={100}
+                height={100}
+                className="object-contain size-full"
+              />
             </Link>
             <p className="text-para text-white">
-              At Fairdeal, we are dedicated to providing high-quality land
-              surveying and digital mapping services. Our experienced team uses
-              state-of-the-art technology to ensure precision and accuracy in
-              every project.{" "}
+              At Fairdeal, we are dedicated to providing high-quality electrical
+              installations and safe modern technology services. Our experienced
+              team uses state-of-the-art technology to ensure precision and
+              accuracy in every project.{" "}
             </p>
           </div>
           <div className="flex flex-1 lg:flex-row flex-col justify-between lg:justify-evenly gap-10">
@@ -60,9 +64,9 @@ export default function Footer() {
               <div className="flex flex-col gap-6">
                 <h5 className="text-btn text-white">Make an Appointment</h5>
                 <p className="text-para text-white w-fit">
-                  Contact us today to schedule your land survey or digital
-                  mapping service. Our friendly and knowledgeable staff are
-                  ready to assist you with all your surveying needs
+                  Contact us today to schedule your electrical survey and safe
+                  modern technology services. Our friendly and knowledgeable
+                  staff are ready to assist you with all your surveying needs.
                 </p>
               </div>
               <div className="flex gap-4">

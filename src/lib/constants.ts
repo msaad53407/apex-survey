@@ -197,6 +197,89 @@ export const termsAndConditions = [
   },
 ];
 
+export const dataPrivacyPoints = [
+  {
+    title: "1. Introduction",
+    description:
+      "Fairdeal Electrical Services Limited is committed to protecting the privacy and security of personal data. This Data Protection Policy outlines our approach to ensuring the confidentiality, integrity, and availability of personal information in compliance with the General Data Protection Regulation (GDPR) and other relevant data protection laws.",
+  },
+  {
+    title: "2. Scope",
+    description:
+      "This policy applies to all employees, contractors, and third-party service providers who have access to personal data held by Fairdeal Electrical Services Limited. It covers all data processing activities, including collection, storage, use, and sharing of personal information.",
+  },
+  {
+    title: "3. Data Protection Principles",
+    description:
+      "We adhere to the following data protection principles:\n\n" +
+      "Lawfulness, Fairness, and Transparency: Personal data will be processed lawfully, fairly, and in a transparent manner.\n" +
+      "Purpose Limitation: Data will be collected for specified, explicit, and legitimate purposes and not further processed in a manner that is incompatible with those purposes.\n" +
+      "Data Minimization: Only data that is necessary for the specified purposes will be collected and processed.\n" +
+      "Accuracy: We will ensure that personal data is accurate and kept up to date.\n" +
+      "Storage Limitation: Personal data will be kept in a form that permits identification for no longer than necessary.\n" +
+      "Integrity and Confidentiality: We will process data in a manner that ensures appropriate security, including protection against unauthorized or unlawful processing, accidental loss, destruction, or damage.",
+  },
+  {
+    title: "4. Data Collection",
+    description:
+      "Personal data will be collected only for specific, explicit, and legitimate purposes. The types of personal data we collect may include:\n\n" +
+      "Contact information (name, address, phone number, email)\n" +
+      "Employment details (job title, employer)\n" +
+      "Financial information (bank details, payment information)\n" +
+      "Technical data (IP address, login data)",
+  },
+  {
+    title: "5. Data Use",
+    description:
+      "Personal data will be used only for the purposes for which it was collected, which may include:\n\n" +
+      "Providing and managing our services\n" +
+      "Communicating with clients and suppliers\n" +
+      "Processing payments and financial transactions\n" +
+      "Complying with legal and regulatory requirements",
+  },
+  {
+    title: "6. Data Security",
+    description:
+      "We implement appropriate technical and organizational measures to protect personal data against unauthorized access, alteration, disclosure, or destruction. These measures include:\n\n" +
+      "Encryption and secure storage of data\n" +
+      "Access controls and authentication mechanisms\n" +
+      "Regular security audits and vulnerability assessments\n" +
+      "Employee training on data protection best practices",
+  },
+  {
+    title: "7. Data Sharing",
+    description:
+      "We do not share personal data with third parties unless necessary for the purposes of our business operations or required by law. When we do share data, we ensure that appropriate safeguards are in place to protect the information.",
+  },
+  {
+    title: "8. Data Retention",
+    description:
+      "Personal data will be retained only for as long as necessary to fulfill the purposes for which it was collected or as required by law. After this period, data will be securely deleted or anonymized.",
+  },
+  {
+    title: "9. Data Subject Rights",
+    description:
+      "Individuals have the following rights regarding their personal data:\n\n" +
+      "The right to access their data\n" +
+      "The right to rectify inaccurate or incomplete data\n" +
+      "The right to erasure (the right to be forgotten)\n" +
+      "The right to restrict processing\n" +
+      "The right to data portability\n" +
+      "The right to object to processing\n" +
+      "The right to withdraw consent at any time",
+  },
+  {
+    title: "10. Breach Notification",
+    description:
+      "In the event of a data breach, we will notify the relevant supervisory authority and affected individuals without undue delay, in accordance with GDPR requirements.",
+  },
+  {
+    title: "11. Policy Review",
+    description:
+      "This policy will be reviewed regularly and updated as necessary to ensure continued compliance with data protection laws and best practices.",
+  },
+];
+
 export const navLinks = [
   {
     name: "Home",
@@ -209,6 +292,10 @@ export const navLinks = [
   {
     name: "FAQ",
     path: "/faqs",
+  },
+  {
+    name: "About US",
+    path: "/about-us",
   },
 ];
 
@@ -264,13 +351,13 @@ export const serviceSteps = [
   },
   {
     icon: "/icons/clipboard-check.svg",
-    heading: "Survey Booked",
+    heading: "Electrical Survey Booked",
     description:
       "Once your order is placed, we will schedule a survey at your convenience. Our team will reach out to confirm the appointment and gather any additional information needed",
   },
   {
     icon: "/icons/search.svg",
-    heading: "Start Land Survey",
+    heading: "Start Electrical Survey",
     description:
       "Our professional surveyors will conduct a thorough survey of your property, ensuring all measurements and data are collected precisely and accurately",
   },
@@ -778,5 +865,60 @@ export const usefulLinks = [
   {
     name: "Terms and Conditions",
     path: "/terms-and-conditions",
+  },
+  {
+    name: "Data Protection and Privacy",
+    path: "/data-protection-and-privacy",
+  },
+];
+
+export const aboutUsServices = [
+  {
+    name: "Electrical Inspections:",
+    description:
+      "Thorough assessments to identify potential hazards and ensure compliance with safety standards.",
+  },
+  {
+    name: "Electrical Installations:",
+    description:
+      "Safe and efficient installations of electrical systems, appliances, and fixtures.",
+  },
+  {
+    name: "Repairs and Maintenance:",
+    description:
+      "Prompt and reliable repair services to keep your electrical systems in optimal condition.",
+  },
+  {
+    name: "Upgrades and Renovations:",
+    description:
+      "Modernizing and enhancing your electrical infrastructure to meet the latest standards and your specific requirements.",
+  },
+];
+
+export const aboutUsObjectives = [
+  {
+    name: "Deliver High-Quality Services:",
+    description:
+      "Provide top-notch electrical installations, repairs, and maintenance services that reflect our commitment to excellence and customer satisfaction.",
+  },
+  {
+    name: "Promote Energy Efficiency:",
+    description:
+      "Implement energy-efficient solutions and upgrades that reduce energy consumption and costs while maintaining optimal performance.",
+  },
+  {
+    name: "Enhance Property Value:",
+    description:
+      "Upgrade and modernize electrical systems to increase the overall value and appeal of residential and commercial properties.",
+  },
+  {
+    name: "Customer Education and Support:",
+    description:
+      "Offer comprehensive support and guidance to our clients, ensuring they understand their electrical systems and feel confident in the safety and reliability of their property's infrastructure.",
+  },
+  {
+    name: "Continuous Improvement:",
+    description:
+      "Stay at the forefront of industry advancements and continuously improve our services through ongoing training and adoption of the latest technologies and best practices.",
   },
 ];

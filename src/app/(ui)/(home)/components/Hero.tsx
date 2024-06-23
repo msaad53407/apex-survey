@@ -28,7 +28,7 @@ export default function Hero() {
                   From residential dreams to commercial endeavors, we deliver
                   precise assessments tailored to your needs.
                 </p>
-                <Link href="#about" className="w-fit">
+                <Link href="/about-us" className="w-fit">
                   <Button
                     className="bg-apex-blue w-max px-10 py-2 text-btn text-white hover:bg-apex-blue"
                     variant="default"
@@ -105,8 +105,8 @@ export default function Hero() {
                 width={10}
                 className="h-6 w-6 text-blue-400"
               />
-              <div className="ml-4">
-                <h4 className="text-btn">Accurate Survey</h4>
+              <div className="ml-4 space-y-5">
+                <h4 className="text-btn">Accurate Electrical Survey</h4>
                 <p className="text-para">
                   Our team ensures precise and accurate surveys using the latest
                   technology and methods. Trust us for reliable data every time
@@ -121,7 +121,7 @@ export default function Hero() {
                 width={10}
                 className="h-6 w-6 text-blue-400"
               />
-              <div className="ml-4">
+              <div className="ml-4 space-y-5">
                 <h4 className="text-btn">Best Service</h4>
                 <p className="text-para">
                   We pride ourselves on providing top-notch customer service.

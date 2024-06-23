@@ -16,10 +16,14 @@ const Header = () => {
   return (
     <header className="flex flex-col w-full">
       <div className="flex flex-row w-full items-center justify-between px-4 lg:px-16 py-2 bg-apex-dark h-max">
-        <Link href="/">
-          <h4 className="text-h4 text-white">
-            Fair<span className="text-apex-blue">deal</span>
-          </h4>
+        <Link href="/" className="flex items-center justify-center w-16">
+          <Image
+            src={"/logo.png"}
+            alt="Logo"
+            width={100}
+            height={100}
+            className="object-contain size-full"
+          />
         </Link>
         <div className="hidden lg:flex flex-row items-center gap-x-8 gap-y-2 my-4">
           {contactLinks.map((link) => (
