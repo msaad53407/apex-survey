@@ -4,49 +4,48 @@ import React from "react";
 
 export const serviceCards = [
   {
-    image: "/Services-1.jpg",
+    image: "/electrical-installation.jpg",
     title: "Electrical Installations",
     link: "electrical-installations",
     description:
       "Our expert electricians provide professional installation services for a wide range of electrical systems. From residential homes to commercial and industrial properties, we ensure every installation meets safety standards and regulatory compliance, guaranteeing reliable and efficient electrical performance.",
   },
   {
-    image: "/Services-2.jpg",
+    image: "/rewiring.jpg",
     title: "Electrical Rewiring",
     link: "electrical-rewiring",
     description:
       "We offer comprehensive rewiring services to modernize your electrical system. Perfect for older properties or those undergoing renovation, our rewiring solutions improve safety, increase capacity, and enhance overall energy efficiency, ensuring your electrical infrastructure is up to date with current standards.",
   },
   {
-    image: "/Services-3.jpg",
+    image: "/testing.jpg",
     title: "Electrical Testing",
     link: "electrical-testing",
     description:
       "Our detailed electrical testing services identify potential hazards and ensure your electrical systems are functioning correctly. We conduct thorough inspections and tests, providing you with a detailed report and recommendations to maintain a safe and efficient electrical environment.",
   },
   {
-    image: "/Services-4.jpg",
+    image: "/fuse-repairing.jpg",
     title: "Fuse Board Repair and Upgrade",
     link: "fuse-board-repair-and-upgrade",
     description:
       "Specializing in fuse board repairs and upgrades, we enhance the safety and performance of your electrical distribution. Our services ensure your fuse board complies with the latest safety regulations, preventing electrical faults and improving overall system reliability.",
   },
   {
-    image: "/Services-5.jpg",
+    image: "/light-repairing.jpg",
     title: "Lighting Repairs and Upgrades",
     link: "lighting-repairs-and-upgrades",
     description:
       "Our lighting repair and upgrade services help you achieve better energy efficiency and lighting quality. Whether it's fixing faulty lights or upgrading to the latest energy-saving technologies, we enhance both the functionality and aesthetics of your lighting systems.",
   },
   {
-    image: "/Services-6.jpg",
+    image: "/smoke-alarms.jpg",
     title: "Smoke Alarms Installations",
     link: "smoke-alarms-installations",
     description:
       "We install high-quality smoke alarms to protect your property and its occupants. Our installation services ensure compliance with all fire safety regulations, providing you with peace of mind knowing that you are well-protected against potential fire hazards.",
   },
 ];
-
 
 const Services = () => {
   return (
