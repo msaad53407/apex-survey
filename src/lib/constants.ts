@@ -141,7 +141,7 @@ export const contactInformation = [
   {
     type: "Client Support",
     icon: "/icons/phone.svg",
-    details: "004432412357",
+    details: "00447932412357",
   },
   {
     type: "Email",
@@ -152,11 +152,10 @@ export const contactInformation = [
     type: "Main Office",
     icon: "/icons/mail-white.svg",
     details: `
-Fairdeal Electrical services Ltd
-47 Vicarage Lane
-Ilford
-IG1 4AG
-London`,
+47 Vicarage Lane, 
+Ilford IG1 
+4AG Essex 
+United Kingdom`,
   },
 ];
 
@@ -250,8 +249,8 @@ export const contactLinks = [
     web_iconPath: "/icons/mail-white.svg",
   },
   {
-    phone_link: "004432412357",
-    phone_text: "Call Us Free: +004432412357",
+    phone_link: "00447932412357",
+    phone_text: "Call Us Free: +00447932412357",
     phone_iconPath: "/icons/phone.svg",
   },
 ];
