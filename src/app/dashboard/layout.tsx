@@ -5,7 +5,7 @@ import DashboardFooter from "./components/DashboardFooter";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dashboard - Apex Survey",
+  title: "Dashboard - Fairdeal",
 };
 
 const DashboardLayout = ({

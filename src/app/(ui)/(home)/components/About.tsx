@@ -20,12 +20,12 @@ const About = () => {
       <div className="w-full lg:w-[45%] flex flex-col gap-8">
         <div className="space-y-4">
           <div className="flex flex-col gap-2">
-            <p className="text-para text-apex-blue">ABOUT APEX SURVEY</p>
+            <p className="text-para text-apex-blue">ABOUT Fairdeal</p>
             <h4 className="text-h4">
               We offer top-tier land surveying and digital mapping services
             </h4>
             <p className="text-para">
-              With years of experience, Apex Survey delivers high-quality land
+              With years of experience, Fairdeal delivers high-quality land
               surveying and digital mapping services
             </p>
           </div>
@@ -68,11 +68,11 @@ const About = () => {
         <div className="rounded-sm flex flex-col justify-center bg-gray-200 px-8 py-4 relative border-l-4 border-l-apex-blue min-h-32 w-full md:w-auto">
           <div className="w-3/4 flex flex-col gap-1">
             <p className="text-para">
-              {`"Apex Survey exceeded my expectations with their professionalism
+              {`"Fairdeal exceeded my expectations with their professionalism
               and accuracy. Highly recommend their services!"`}
             </p>
             <h5 className="text-para font-bold lg:text-btn ">
-              Zander Jones - Apex Survey
+              Zander Jones - Fairdeal
             </h5>
           </div>
           <div className="flex items-center justify-center size-10 absolute bottom-6 right-6">

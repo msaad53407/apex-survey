@@ -18,11 +18,11 @@ export default function Footer() {
           <div className="flex flex-col gap-4 w-full lg:w-min">
             <Link href="/">
               <h4 className="text-h4 text-white">
-                Apex<span className="text-apex-blue">Survey</span>
+                Fair<span className="text-apex-blue">deal</span>
               </h4>
             </Link>
             <p className="text-para text-white">
-              At ApexSurvey, we are dedicated to providing high-quality land
+              At Fairdeal, we are dedicated to providing high-quality land
               surveying and digital mapping services. Our experienced team uses
               state-of-the-art technology to ensure precision and accuracy in
               every project.{" "}
@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
         <div className="flex w-full flex-col lg:flex-row items-center justify-between lg:justify-end gap-6 lg:gap-64">
           <p className="text-small text-center md:text-start order-last lg:order-first md:text-para lg:text-btn text-white">
-            Copyright © {new Date().getFullYear()} ApexSurvey. All Rights
+            Copyright © {new Date().getFullYear()} Fairdeal. All Rights
             Reserved.
           </p>
           <div className="flex lg:hidden flex-col gap-4 items-center">
@@ -93,7 +93,7 @@ export default function Footer() {
                 height={12}
                 className="object-contain size-fit text-white"
               />
-              <p className="text-para text-white">info@apexsurvey.org.pk</p>
+              <p className="text-para text-white">info@Fairdeal.org.pk</p>
             </div>
             <div className="flex items-center gap-4">
               <Image

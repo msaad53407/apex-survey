@@ -8,7 +8,7 @@ const Sidebar = () => {
       <div className=" p-4">
         <Link href="/">
           <h4 className="text-btn text-black">
-            Apex<span className="text-apex-blue">Survey</span>
+            Fair<span className="text-apex-blue">deal</span>
           </h4>
         </Link>
       </div>

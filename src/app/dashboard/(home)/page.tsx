@@ -11,7 +11,7 @@ import RadialProgress from "./components/RadialProgress";
 const Dashboard = () => {
   return (
     <div className="flex flex-col gap-4 w-full px-4 min-h-[60vh] overflow-y-scroll">
-      <h5 className="text-para">Welcome to Apex Survey Admin</h5>
+      <h5 className="text-para">Welcome to Fairdeal Admin</h5>
       <section className="grid grid-cols-7 gap-4 h-max">
         <div className="grid grid-cols-1 grid-rows-2 col-span-3 gap-4">
           <div className="bg-apex-blue rounded-xl flex w-full items-center p-4 gap-4">

@@ -18,7 +18,7 @@ const Header = () => {
       <div className="flex flex-row w-full items-center justify-between px-4 lg:px-16 py-2 bg-apex-dark h-max">
         <Link href="/">
           <h4 className="text-h4 text-white">
-            Apex<span className="text-apex-blue">Survey</span>
+            Fair<span className="text-apex-blue">deal</span>
           </h4>
         </Link>
         <div className="hidden lg:flex flex-row items-center gap-x-8 gap-y-2 my-4">

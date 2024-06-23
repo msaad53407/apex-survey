@@ -2,7 +2,7 @@ import { SearchX } from "lucide-react";
 import React from "react";
 
 export const metadata = {
-  title: "Apex Survey - Not Found",
+  title: "Fairdeal - Not Found",
 };
 
 const NotFound = () => {

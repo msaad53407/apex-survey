@@ -59,7 +59,7 @@ const Services = () => {
           <Link
             key={index}
             href={`/services/${card.link}`}
-            className="flex flex-col items-center relative gap-4 mb-20 lg:mb-auto justify-center lg:justify-between flex-nowrap w-full sm:w-[48%] lg:w-[24%] max-h-[187px]"
+            className="flex flex-col items-center relative gap-4 mb-20 lg:mb-auto justify-center lg:justify-between flex-nowrap w-full sm:w-[48%] lg:w-[24%]"
           >
             <div className="flex items-center justify-center w-full">
               <Image
