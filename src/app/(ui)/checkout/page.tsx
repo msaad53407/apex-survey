@@ -2,7 +2,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import Heading from "./components/Heading";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
@@ -22,16 +22,15 @@ import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Checkout - Fairdeal Electrical",
-};
 
 const CheckoutContent = () => {
   const route = useRouter();
   const searchParams = useSearchParams();
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    document.title = "Checkout - Fairdeal Electrical";
+  }, []);
 
   const orderId = searchParams.get("orderId");
   if (orderId == null) {

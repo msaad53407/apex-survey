@@ -32,11 +32,6 @@ import type { z } from "zod";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import Error from "@/components/Error";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Order Now - Fairdeal Electrical",
-};
 
 const OrderNow = () => {
   const router = useRouter();
@@ -44,6 +39,10 @@ const OrderNow = () => {
   const form = useForm<z.infer<typeof InstantQuoteSchema>>({
     resolver: zodResolver(InstantQuoteSchema),
   });
+
+  useEffect(() => {
+    document.title = "Order Now - Fairdeal Electrical";
+  }, []);
 
   const [subFields, setSubFields] = useState<string[]>([]);
   const [loading, setLoading] = useState(false); // State for loading
