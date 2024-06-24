@@ -56,11 +56,16 @@ const MobileNavbarMenu = ({
       <SheetContent className="!p-0 !w-full !sm:max-w-full ">
         <SheetHeader className="!w-full">
           <div className="flex flex-row w-full items-center justify-between px-4 lg:px-16 py-2 bg-apex-dark h-max">
-            <Link href="/">
-              <h4 className="text-h4 text-white">
-                Fair<span className="text-apex-blue">deal</span>
-              </h4>
-            </Link>
+            <Link href="/" className="flex items-center justify-center w-12">
+              <Image
+                src={"/logo.png"}
+                alt="Logo"
+                width={100}
+                height={100}
+                className="object-contain size-full"
+              />
+            </Link>{" "}
+            G
           </div>
         </SheetHeader>
         <div className="flex flex-col w-full h-max gap-8 px-14 py-8">
