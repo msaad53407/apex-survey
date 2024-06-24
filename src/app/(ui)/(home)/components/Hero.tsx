@@ -108,7 +108,7 @@ export default function Hero() {
               <div className="ml-4 space-y-5">
                 <h4 className="text-btn">Accurate Electrical Assessment</h4>
                 <p className="text-para">
-                  Our team ensures precise and accurate surveys using the latest
+                  Our team ensures precise and accurate assessments using the latest
                   technology and methods. Trust us for reliable data every time
                 </p>
               </div>

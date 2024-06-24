@@ -15,7 +15,7 @@ export const reviewData = [
     image: "/people/Review-card.png",
     name: "Jonas Jonasson",
     description:
-      "Quick and reliable! The entire process was straightforward, and the survey was completed faster than I expected. Great experience overall.",
+      "Quick and reliable! The entire process was straightforward, and the assessemnt was completed faster than I expected. Great experience overall.",
     date: "2024-05-17",
   },
   {
@@ -29,7 +29,7 @@ export const reviewData = [
     image: "/people/usman-yousaf-yIOViGQmjJ4-unsplash.jpg",
     name: "Usman Yousaf",
     description:
-      "Top-notch service! The online ordering was easy, the surveyors were punctual and thorough, and the certificate was delivered promptly. Would definitely use again.",
+      "Top-notch service! The online ordering was easy, the assessors were punctual and thorough, and the certificate was delivered promptly. Would definitely use again.",
     date: "2024-06-22",
   },
 ];

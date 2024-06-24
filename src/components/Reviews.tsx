@@ -19,7 +19,7 @@ const Reviews = () => {
         <h3 className="text-h3 text-center w-full">What Our Customer Says</h3>
         <p className="text-small text-center">
           We are a team of building physicists and engineers, software
-          developers, surveyors and business management specialists and for
+          developers, assessors and business management specialists and for
           nearly 40 years we have been Making Buildings Better.
         </p>
       </div>
