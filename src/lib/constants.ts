@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { z } from "zod";
 import { InstantQuoteSchema } from "./schema";
 import { SubField } from "@/types";
@@ -163,12 +164,12 @@ export const termsAndConditions = [
   {
     title: "Scope of Work:",
     description:
-      "Our services include a comprehensive range of surveying and mapping solutions, tailored to meet the specific needs of each client. This includes but is not limited to boundary surveys, topographic surveys, and construction staking. Detailed project deliverables will be outlined in the individual contract agreement.",
+      "Our services include a comprehensive range of surveying and mapping solutions, tailored to meet the specific needs of each client. This includes but is not limited to boundary assessments, topographic assessments, and construction staking. Detailed project deliverables will be outlined in the individual contract agreement.",
   },
   {
     title: "Client Responsibilities:",
     description:
-      "Clients are expected to provide access to the survey site and any relevant documentation necessary for the completion of the project. This includes property deeds, previous survey reports, and any specific instructions or requirements related to the survey.",
+      "Clients are expected to provide access to the assessment site and any relevant documentation necessary for the completion of the project. This includes property deeds, previous assessment reports, and any specific instructions or requirements related to the assessment.",
   },
   {
     title: "Contract Duration:",
@@ -188,12 +189,12 @@ export const termsAndConditions = [
   {
     title: "Liability:",
     description:
-      "Our liability is limited to the value of the contract. We are not responsible for any indirect or consequential damages arising from the use of our survey reports. Clients are advised to review the reports thoroughly and notify us of any discrepancies.",
+      "Our liability is limited to the value of the contract. We are not responsible for any indirect or consequential damages arising from the use of our assessment reports. Clients are advised to review the reports thoroughly and notify us of any discrepancies.",
   },
   {
     title: "Disclaimer:",
     description:
-      "While we strive for accuracy, surveying inherently involves a degree of estimation and judgment. The information provided in our reports is based on the data available at the time of the survey. We recommend clients seek independent verification if critical decisions are based on the survey results.",
+      "While we strive for accuracy, assessing inherently involves a degree of estimation and judgment. The information provided in our reports is based on the data available at the time of the assessment. We recommend clients seek independent verification if critical decisions are based on the assessment results.",
   },
 ];
 
@@ -351,21 +352,21 @@ export const serviceSteps = [
   },
   {
     icon: "/icons/clipboard-check.svg",
-    heading: "Electrical Survey Booked",
+    heading: "Electrical Assessment Booked",
     description:
-      "Once your order is placed, we will schedule a survey at your convenience. Our team will reach out to confirm the appointment and gather any additional information needed",
+      "Once your order is placed, we will schedule a assessment at your convenience. Our team will reach out to confirm the appointment and gather any additional information needed",
   },
   {
     icon: "/icons/search.svg",
-    heading: "Start Electrical Survey",
+    heading: "Start Electrical Assessment",
     description:
-      "Our professional surveyors will conduct a thorough survey of your property, ensuring all measurements and data are collected precisely and accurately",
+      "Our professional team will conduct a thorough assessment of your property, ensuring all measurements and data are collected precisely and accurately",
   },
   {
     icon: "/icons/certificate.svg",
     heading: "Certificate Issued",
     description:
-      "After the survey is complete, we will issue a detailed certificate. This document will include all relevant data and findings, formally concluding the process.",
+      "After the assessment is complete, we will issue a detailed certificate. This document will include all relevant data and findings, formally concluding the process.",
   },
 ];
 

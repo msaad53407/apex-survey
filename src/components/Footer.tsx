@@ -64,9 +64,9 @@ export default function Footer() {
               <div className="flex flex-col gap-6">
                 <h5 className="text-btn text-white">Make an Appointment</h5>
                 <p className="text-para text-white w-fit">
-                  Contact us today to schedule your electrical survey and safe
+                  Contact us today to schedule your electrical assessment and safe
                   modern technology services. Our friendly and knowledgeable
-                  staff are ready to assist you with all your surveying needs.
+                  staff are ready to assist you with all your assessment needs.
                 </p>
               </div>
               <div className="flex gap-4">

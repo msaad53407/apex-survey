@@ -243,11 +243,7 @@ const OrderNow = () => {
                   <h5 className="text-para sm:text-h5 font-bold">
                     {item.label}
                   </h5>
-                  <p className="text-small">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quidem aut incidunt officiis ipsum pariatur nihil delectus
-                    rerum, dolores magni sapiente?
-                  </p>
+                  <p className="text-small">{item.description}</p>
                 </Label>
               </Checkbox>
             ))}
