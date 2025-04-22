@@ -19,13 +19,14 @@ export default function Footer() {
       <div className="flex flex-col gap-12 max-w-screen-xl mx-auto">
         <div className="flex flex-col lg:flex-row justify-between gap-y-6 xl:gap-x-6">
           <div className="flex flex-col gap-4 w-full lg:w-32 xl:w-1/3 py-4">
-            <Link href="/" className="flex items-center justify-center w-1/3 lg:w-1/2 xl:w-fit mx-auto">
+            <Link href="/" className="flex items-center justify-center w-[70%] sm:w-1/2 lg:w-[80%] mx-auto">
               <Image
                 src={"/logo.png"}
                 alt="Logo"
-                width={100}
-                height={100}
-                className="object-contain size-full"
+                width={1000}
+                height={1000}
+                quality={100}
+                className="object-cover size-full"
               />
             </Link>
             <p className="text-para text-white">

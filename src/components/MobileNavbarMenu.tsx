@@ -55,8 +55,8 @@ const MobileNavbarMenu = ({
       </SheetTrigger>
       <SheetContent className="!p-0 !w-full !sm:max-w-full ">
         <SheetHeader className="!w-full">
-          <div className="flex flex-row w-full items-center justify-between px-4 lg:px-16 py-2 bg-apex-dark h-max">
-            <Link href="/" className="flex items-center justify-center w-12">
+          <div className="flex flex-row w-full items-center justify-between px-4 lg:px-16 py-3 bg-apex-dark h-max">
+            <Link href="/" className="flex items-center justify-center w-44">
               <Image
                 src={"/logo.png"}
                 alt="Logo"
