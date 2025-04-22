@@ -7,13 +7,22 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
 import { serviceCards } from "@/components/Services";
-import Head from "next/head";
 
 type ElectricalMaintenanceProps = {
   params: {
     serviceName?: string;
   };
 };
+
+export async function generateMetadata({ params }: ElectricalMaintenanceProps) {
+  const selectedService = serviceCards.find(
+    (service) => service.link === params.serviceName
+  );
+
+  return {
+    title: `${selectedService?.title} - Fairdeal Electrical`,
+  };
+}
 
 const ElectricalMaintenance = ({ params }: ElectricalMaintenanceProps) => {
   const selectedService = serviceCards.find(
@@ -24,9 +33,6 @@ const ElectricalMaintenance = ({ params }: ElectricalMaintenanceProps) => {
 
   return (
     <>
-      <Head>
-        <title>Hello World</title>
-      </Head>
       <Banner
         image="/banner-image.png"
         className="size-full items-center justify-center inset-0 mx-auto"

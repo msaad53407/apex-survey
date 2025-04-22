@@ -17,9 +17,9 @@ export default function Footer() {
   return (
     <footer className="bg-apex-dark w-full px-8 py-3 lg:px-16 lg:py-6">
       <div className="flex flex-col gap-12 max-w-screen-xl mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between gap-y-6">
-          <div className="flex flex-col gap-4 w-full lg:w-32 xl:w-40 py-4">
-            <Link href="/" className="flex items-center justify-center w-1/2 mx-auto">
+        <div className="flex flex-col lg:flex-row justify-between gap-y-6 xl:gap-x-6">
+          <div className="flex flex-col gap-4 w-full lg:w-32 xl:w-1/3 py-4">
+            <Link href="/" className="flex items-center justify-center w-1/3 lg:w-1/2 xl:w-fit mx-auto">
               <Image
                 src={"/logo.png"}
                 alt="Logo"
@@ -35,7 +35,7 @@ export default function Footer() {
               accuracy in every project.{" "}
             </p>
           </div>
-          <div className="flex flex-1 lg:flex-row flex-col justify-between lg:justify-evenly gap-10">
+          <div className="flex flex-1 lg:flex-row flex-col justify-between lg:justify-evenly xl:justify-end gap-10">
             <div className="flex flex-row gap-4 justify-between">
               <nav className="flex flex-col gap-6 flex-1 lg:flex-auto">
                 <h5 className="text-btn text-white">Quick Links</h5>
@@ -64,9 +64,9 @@ export default function Footer() {
               <div className="flex flex-col gap-6">
                 <h5 className="text-btn text-white">Make an Appointment</h5>
                 <p className="text-para text-white w-fit">
-                  Contact us today to schedule your electrical survey and safe
+                  Contact us today to schedule your electrical assessment and safe
                   modern technology services. Our friendly and knowledgeable
-                  staff are ready to assist you with all your surveying needs.
+                  staff are ready to assist you with all your assessment needs.
                 </p>
               </div>
               <div className="flex gap-4">

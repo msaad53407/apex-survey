@@ -82,7 +82,7 @@ export default function Hero() {
           <div className="hidden lg:inline-block bg-apex-grey-bluish relative lg:absolute lg:left-[40%] lg:top-20 py-8 px-6 rounded-lg shadow-lg lg:w-1/4 max-w-80 2xl:left-1/2">
             <h4 className="text-btn text-white mb-4">We provide</h4>
             <p className="text-para text-white mb-2">
-              Accurate Survey <span className="float-right">93%</span>
+              Accurate Assessment <span className="float-right">93%</span>
             </p>
             <Progress
               className="w-full mb-4 bg-white text-apex-blue"
@@ -106,9 +106,9 @@ export default function Hero() {
                 className="h-6 w-6 text-blue-400"
               />
               <div className="ml-4 space-y-5">
-                <h4 className="text-btn">Accurate Electrical Survey</h4>
+                <h4 className="text-btn">Accurate Electrical Assessment</h4>
                 <p className="text-para">
-                  Our team ensures precise and accurate surveys using the latest
+                  Our team ensures precise and accurate assessments using the latest
                   technology and methods. Trust us for reliable data every time
                 </p>
               </div>

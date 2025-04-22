@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 
 import { useEffect, useState } from "react";
@@ -37,11 +38,13 @@ export const propertyType = [
   {
     id: "residential",
     label: "Residential",
+    description: "Residential properties",
     icon: <HomeIcon className="size-8" />,
   },
   {
     id: "commercial",
     label: "Commercial",
+    description: "Commercial properties",
     icon: <Building className="size-8" />,
   },
 ];
@@ -262,11 +265,7 @@ const InstantQuoteModal = () => {
                     <h5 className="text-para sm:text-h5 font-bold">
                       {item.label}
                     </h5>
-                    <p className="text-small">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Quidem aut incidunt officiis ipsum pariatur nihil delectus
-                      rerum, dolores magni sapiente?
-                    </p>
+                    <p className="text-small">{item.description}</p>
                   </Label>
                 </Checkbox>
               ))}

@@ -46,7 +46,7 @@ const faqs = [
         <p className="text-para">
           Yes, we have a dedicated team of experienced professionals. Our team
           includes licensed surveyors, engineers, and technical experts who are
-          well-versed in the latest surveying techniques and technologies. They
+          well-versed in the latest assessment techniques and technologies. They
           work collaboratively to ensure that each project is completed
           accurately and efficiently.
         </p>
@@ -60,7 +60,7 @@ const faqs = [
         <p className="text-para">
           Absolutely. In addition to our standard surveying services, we offer a
           range of additional services to meet your specific needs. These
-          include topographic surveys, construction staking, boundary surveys,
+          include topographic assessments, construction staking, boundary assessments,
           and more. You can discuss your requirements with our team, and we will
           tailor our services accordingly.
         </p>

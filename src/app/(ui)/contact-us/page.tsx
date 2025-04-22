@@ -36,7 +36,11 @@ const ContactUs = () => {
                     style={{ color: "white" }}
                     className="object-contain size-fit text-white"
                   />
-                  <pre className="text-small text-white">{info.details}</pre>
+                  {info.type.includes("Office") ? (
+                    <pre className="text-small text-white">{info.details}</pre>
+                  ) : (
+                    <p className="text-small text-white">{info.details}</p>
+                  )}
                 </div>
               </div>
             ))}
