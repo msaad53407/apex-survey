@@ -5,51 +5,72 @@ import React from "react";
 export const serviceCards = [
   {
     image: "/electrical-installation.jpg",
-    title: "Electrical Installations",
-    link: "electrical-installations",
+    title: "Electrical Installation Condition Report (EICR)",
+    link: "electrical-installation-condition-report",
     description:
-      "Our expert electricians provide professional installation services for a wide range of electrical systems. From residential homes to commercial and industrial properties, we ensure every installation meets safety standards and regulatory compliance, guaranteeing reliable and efficient electrical performance.",
+      "Our comprehensive EICR service provides a thorough assessment of your property's electrical installations. We identify potential hazards, ensure compliance with current regulations, and provide detailed reports with recommendations for any necessary remedial work.",
   },
   {
     image: "/rewiring.jpg",
-    title: "Electrical Rewiring",
-    link: "electrical-rewiring",
+    title: "EICR Remedial Work",
+    link: "eicr-remedial-work",
     description:
-      "We offer comprehensive rewiring services to modernize your electrical system. Perfect for older properties or those undergoing renovation, our rewiring solutions improve safety, increase capacity, and enhance overall energy efficiency, ensuring your electrical infrastructure is up to date with current standards.",
+      "Following an EICR inspection, our qualified electricians carry out all necessary remedial work to bring your electrical system up to current safety standards. We address any identified issues efficiently and professionally.",
   },
   {
     image: "/testing.jpg",
-    title: "Electrical Testing",
-    link: "electrical-testing",
+    title: "Electrical Portable Appliance Testing (PAT)",
+    link: "electrical-portable-appliance-testing",
     description:
-      "Our detailed electrical testing services identify potential hazards and ensure your electrical systems are functioning correctly. We conduct thorough inspections and tests, providing you with a detailed report and recommendations to maintain a safe and efficient electrical environment.",
+      "Our PAT testing service ensures all your portable electrical appliances are safe to use. We provide thorough testing and certification for businesses and landlords, helping you meet your legal obligations and keep your premises safe.",
   },
   {
     image: "/fuse-repairing.jpg",
-    title: "Fuse Board Repair and Upgrade",
-    link: "fuse-board-repair-and-upgrade",
+    title: "Display Energy Certificate (DEC)",
+    link: "display-energy-certificate",
     description:
-      "Specializing in fuse board repairs and upgrades, we enhance the safety and performance of your electrical distribution. Our services ensure your fuse board complies with the latest safety regulations, preventing electrical faults and improving overall system reliability.",
+      "We provide Display Energy Certificates for public buildings, showing their energy efficiency rating. Our assessors evaluate your building's energy performance and provide recommendations for improvement.",
   },
   {
     image: "/light-repairing.jpg",
-    title: "Lighting Repairs and Upgrades",
-    link: "lighting-repairs-and-upgrades",
+    title: "Gas Safety Certificate",
+    link: "gas-safety-certificate",
     description:
-      "Our lighting repair and upgrade services help you achieve better energy efficiency and lighting quality. Whether it's fixing faulty lights or upgrading to the latest energy-saving technologies, we enhance both the functionality and aesthetics of your lighting systems.",
+      "Our Gas Safe registered engineers conduct thorough gas safety inspections and provide legally required certificates for landlords and property owners. We ensure all gas appliances and installations are safe and compliant.",
   },
   {
     image: "/smoke-alarms.jpg",
-    title: "Smoke Alarms Installations",
-    link: "smoke-alarms-installations",
+    title: "Fire Risk Assessment",
+    link: "fire-risk-assessment",
     description:
-      "We install high-quality smoke alarms to protect your property and its occupants. Our installation services ensure compliance with all fire safety regulations, providing you with peace of mind knowing that you are well-protected against potential fire hazards.",
+      "Our comprehensive fire risk assessments identify potential fire hazards in your property. We provide detailed reports with actionable recommendations to ensure compliance with fire safety regulations and protect occupants.",
+  },
+  {
+    image: "/electrical-ppm-image.png",
+    title: "Emergency Lighting Test Report",
+    link: "emergency-lighting-test-report",
+    description:
+      "We provide professional testing and certification of emergency lighting systems. Our engineers ensure your emergency lighting meets all regulatory requirements and will function correctly in an emergency.",
+  },
+  {
+    image: "/Hero-Banner.png",
+    title: "Fire Alarm Test Report",
+    link: "fire-alarm-test-report",
+    description:
+      "Our fire alarm testing service ensures your fire detection and alarm systems are functioning correctly. We provide comprehensive testing, maintenance, and certification to keep your property safe and compliant.",
+  },
+  {
+    image: "/commercial-epc.jpg",
+    title: "Commercial EPC",
+    link: "commercial-epc",
+    description:
+      "We provide Energy Performance Certificates for commercial properties. Our qualified assessors evaluate your building's energy efficiency and provide ratings along with recommendations to improve energy performance.",
   },
 ];
 
 const Services = () => {
   return (
-    <section className="px-7 lg:px-10 flex flex-col gap-4 mb-20 max-w-screen-xl mx-auto">
+    <section className="px-7 lg:px-10 flex flex-col gap-4 mb-20 max-w-screen-xl lg:min-w-[1024px] xl:min-w-[1280px] mx-auto">
       <div className="space-y-1">
         <p className="text-para">Popular Services</p>
         <h3 className="text-h4 lg:text-h3">What Services We Offer</h3>

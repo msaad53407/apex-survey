@@ -49,8 +49,26 @@ export const propertyType = [
   },
 ];
 
-const InstantQuoteModal = () => {
-  const [open, setOpen] = useState(false);
+interface InstantQuoteModalProps {
+  trigger?: React.ReactNode;
+  prefilledData?: {
+    propertyType?: "residential" | "commercial";
+    serviceIds?: string[];
+  };
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+const InstantQuoteModal = ({
+  trigger,
+  prefilledData,
+  open: controlledOpen,
+  onOpenChange,
+}: InstantQuoteModalProps) => {
+  const [internalOpen, setInternalOpen] = useState(false);
+  const open = controlledOpen !== undefined ? controlledOpen : internalOpen;
+  const setOpen = onOpenChange || setInternalOpen;
+
   const form = useForm<z.infer<typeof InstantQuoteSchema>>({
     resolver: zodResolver(InstantQuoteSchema),
   });
@@ -58,6 +76,22 @@ const InstantQuoteModal = () => {
   const [loading, setLoading] = useState(false); // State for loading
   const [hasSubmitted, setHasSubmitted] = useState(false); // State to track if the form has been
   const router = useRouter();
+
+  // Prefill form data when modal opens with prefilledData
+  useEffect(() => {
+    if (open && prefilledData) {
+      if (prefilledData.propertyType) {
+        form.setValue("propertyType", prefilledData.propertyType);
+      }
+      if (prefilledData.serviceIds && prefilledData.serviceIds.length > 0) {
+        const selectedServices = services.filter((service) =>
+          prefilledData.serviceIds?.includes(service.id),
+        );
+        form.setValue("services", selectedServices);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, prefilledData]);
 
   async function onSubmit(data: z.infer<typeof InstantQuoteSchema>) {
     try {
@@ -79,13 +113,14 @@ const InstantQuoteModal = () => {
 
   const handleChangeInPropertyType = (
     checked: CheckedState,
-    itemId: string
+    itemId: string,
   ) => {
     if (checked) {
       form.setValue(
         "propertyType",
-        itemId as z.infer<typeof InstantQuoteSchema>["propertyType"]
+        itemId as z.infer<typeof InstantQuoteSchema>["propertyType"],
       );
+
       setSubFields([]);
       form.setValue("services", []);
     }
@@ -93,20 +128,20 @@ const InstantQuoteModal = () => {
 
   const handleChangeInService = (
     checked: CheckedState,
-    item: z.infer<typeof InstantQuoteSchema>["services"][number]
+    item: z.infer<typeof InstantQuoteSchema>["services"][number],
   ) => {
     if (checked) {
       form.setValue(
         "services",
         Array.isArray(form.watch("services"))
           ? [...form.watch("services"), item]
-          : [item]
+          : [item],
       );
       setSubFields([]);
     } else {
       form.setValue(
         "services",
-        form.watch("services")?.filter((value) => value.id !== item.id)
+        form.watch("services")?.filter((value) => value.id !== item.id),
       );
       //filter out subfields of the current item from subFields array
       setSubFields([]);
@@ -120,7 +155,7 @@ const InstantQuoteModal = () => {
           // filtering subfields based on property type If services selected contain property type field.
           item.id === "property"
             ? subFieldItem.propertyType === form.watch("propertyType")
-            : true
+            : true,
         )
         .map((subFieldItem) => {
           return (
@@ -200,7 +235,7 @@ const InstantQuoteModal = () => {
 
       // remove duplicates from newFields array
       const uniqueFields: string[] | undefined = newFields?.filter(
-        (item, index) => newFields.indexOf(item) === index
+        (item, index) => newFields.indexOf(item) === index,
       );
 
       if (uniqueFields?.length <= 0 || !uniqueFields) {
@@ -220,14 +255,18 @@ const InstantQuoteModal = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button
-          variant="secondary"
-          className="w-1/2 text-center text-btn text-white bg-apex-blue hover:bg-apex-blue"
-        >
-          Quote Now
-        </Button>
-      </DialogTrigger>
+      {trigger ? (
+        <DialogTrigger asChild>{trigger}</DialogTrigger>
+      ) : (
+        <DialogTrigger asChild>
+          <Button
+            variant="secondary"
+            className="w-1/2 text-center text-btn text-white bg-apex-blue hover:bg-apex-blue"
+          >
+            Quote Now
+          </Button>
+        </DialogTrigger>
+      )}
       <DialogContent className="max-w-[95%] sm:max-w-xl max-h-[90vh] overflow-y-auto rounded-sm no-scrollbar">
         <DialogHeader>
           <DialogTitle className="text-h4">Get Instant Quote</DialogTitle>
@@ -285,8 +324,8 @@ const InstantQuoteModal = () => {
                 {services
                   .filter((service) =>
                     service.servicePropertyType.includes(
-                      form.watch("propertyType")
-                    )
+                      form.watch("propertyType"),
+                    ),
                   )
                   .map((item) => (
                     <Checkbox
@@ -334,7 +373,7 @@ const InstantQuoteModal = () => {
                         item.fieldType === "counter" ||
                           item.fieldType === "dropdown"
                           ? "grid-cols-1"
-                          : "grid-cols-1 md:grid-cols-2"
+                          : "grid-cols-1 md:grid-cols-2",
                       )}
                     >
                       {renderSubFieldsOptions(item)}
