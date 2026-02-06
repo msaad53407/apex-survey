@@ -482,7 +482,7 @@ export const contactInformation = [
   {
     type: "Client Support",
     icon: "/icons/phone.svg",
-    details: "00447932412357",
+    details: "442039942679",
   },
   {
     type: "Email",
@@ -490,13 +490,12 @@ export const contactInformation = [
     details: "contact@fairdealelectrical.co.uk",
   },
   {
-    type: "Main Office",
+    type: "Registered Office Address",
     icon: "/icons/mail-white.svg",
-    details: `
-47 Vicarage Lane, 
-Ilford IG1 
-4AG Essex 
-United Kingdom`,
+    details: `FAIRDEAL ELECTRICAL SERVICES LIMITED
+6th Floor, 37 Lombard Street
+London
+EC3V 9BQ`,
   },
 ];
 
@@ -689,8 +688,8 @@ export const contactLinks = [
     web_iconPath: "/icons/mail-white.svg",
   },
   {
-    phone_link: "00447932412357",
-    phone_text: "Call Us Free: +00447932412357",
+    phone_link: "442039942679",
+    phone_text: "Call Us Free: +442039942679",
     phone_iconPath: "/icons/phone.svg",
   },
 ];
