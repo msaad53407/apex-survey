@@ -97,7 +97,8 @@ const config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["var(--font-lato)", ...fontFamily.sans],
+        heading: ["var(--font-montserrat)", ...fontFamily.sans],
       },
       borderRadius: {
         lg: "var(--radius)",

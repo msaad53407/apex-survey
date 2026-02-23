@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { prisma } from '../../../../../lib/db';
 
+export const dynamic = 'force-dynamic';
 
 import UserDetails from '../../components/UserDetails';
 
