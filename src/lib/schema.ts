@@ -177,12 +177,11 @@ export const InstantQuoteSchema = z.object({
     })
     .optional(),
   propertyArea: z
-    .string({
-      required_error: "Please Select Fire Risk Assesment and  Property Area",
-    })
+    .string()
     .min(1, {
       message: "Please select property area",
-    }),
+    })
+    .optional(),
   noOfBedrooms: z
     .string()
     .min(1, {

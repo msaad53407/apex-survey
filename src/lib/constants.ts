@@ -490,7 +490,7 @@ export const contactInformation = [
     details: "contact@fairdealelectrical.co.uk",
   },
   {
-    type: "Registered Office Address",
+    type: "Address",
     icon: "/icons/mail-white.svg",
     details: `FAIRDEAL ELECTRICAL SERVICES LIMITED
 6th Floor, 37 Lombard Street

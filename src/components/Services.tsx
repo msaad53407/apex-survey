@@ -59,13 +59,13 @@ export const serviceCards = [
     description:
       "Our fire alarm testing service ensures your fire detection and alarm systems are functioning correctly. We provide comprehensive testing, maintenance, and certification to keep your property safe and compliant.",
   },
-  {
-    image: "/commercial-epc.jpg",
-    title: "Commercial EPC",
-    link: "commercial-epc",
-    description:
-      "We provide Energy Performance Certificates for commercial properties. Our qualified assessors evaluate your building's energy efficiency and provide ratings along with recommendations to improve energy performance.",
-  },
+  // {
+  //   image: "/commercial-epc.jpg",
+  //   title: "Commercial EPC",
+  //   link: "commercial-epc",
+  //   description:
+  //     "We provide Energy Performance Certificates for commercial properties. Our qualified assessors evaluate your building's energy efficiency and provide ratings along with recommendations to improve energy performance.",
+  // },
 ];
 
 const Services = () => {
