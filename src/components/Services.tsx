@@ -91,8 +91,8 @@ const Services = () => {
                 className="object-cover size-full"
               />
             </div>
-            <div className="bg-black p-2 lg:p-4 lg:pb-5 absolute -bottom-10 lg:-bottom-14 w-[90%] mx-auto h-max min-h-16 lg:min-h-24 flex items-center justify-center">
-              <h5 className="text-small text-wrap sm:w-full w-[85%] font-semibold lg:text-btn text-center text-white">
+            <div className="bg-black p-2 rounded-md lg:p-4 absolute -bottom-10 lg:-bottom-14 w-[90%] mx-auto h-max min-h-16 lg:min-h-24 flex items-center justify-center">
+              <h5 className="text-small text-wrap sm:w-full w-[85%] font-semibold lg:text-lg text-center text-white">
                 {card.title}
               </h5>
             </div>
