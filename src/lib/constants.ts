@@ -482,7 +482,7 @@ export const contactInformation = [
   {
     type: "Client Support",
     icon: "/icons/phone.svg",
-    details: "442039942679",
+    details: "+442039942679",
   },
   {
     type: "Email",
