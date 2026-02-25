@@ -1,5 +1,5 @@
 // // @ts-nocheck
-// "use client";
+"use client";
 
 // import Counter from "@/components/Counter";
 // import { propertyType } from "@/components/dialogs/InstantQuoteModal";
@@ -355,3 +355,10 @@
 // };
 
 // export default OrderNow;
+import React from 'react'
+
+export const page = () => {
+  return (
+    <div></div>
+  )
+}

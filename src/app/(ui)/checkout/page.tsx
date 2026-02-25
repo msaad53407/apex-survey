@@ -1,5 +1,5 @@
-// //@ts-nocheck
-// "use client";
+//@ts-nocheck
+"use client";
 
 // import { Button } from "@/components/ui/button";
 // import React, { Suspense, useEffect } from "react";
@@ -283,3 +283,10 @@
 // );
 
 // export default Checkout;
+import React from 'react'
+
+export const page = () => {
+  return (
+    <div></div>
+  )
+}
