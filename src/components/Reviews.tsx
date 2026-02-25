@@ -39,13 +39,13 @@ const Reviews = () => {
         <div className="flex flex-col items-center gap-2 py-6">
           <div className="flex flex-col items-center gap-1">
             <div className="flex items-center gap-3">
-              <span className="text-6xl font-bold text-apex-blue">4.9</span>
+              <span className="text-6xl font-bold text-apex-blue">5.0</span>
               <div className="flex flex-col justify-center">
                 <span className="text-base text-apex-blue font-medium">
                   Overall rating
                 </span>
                 <span className="text-base font-bold text-gray-800">
-                  {reviewData.length + 100} total ratings
+                  {reviewData.length + 460}+ total ratings
                 </span>
               </div>
             </div>

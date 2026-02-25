@@ -60,7 +60,7 @@ export default function Hero() {
                   />
                   <div className="space-y-1">
                     <span className="text-h5">
-                      25<sup>+</sup>
+                      15<sup>+</sup>
                     </span>
                     <p className="text-para">Years of Experience</p>
                   </div>
