@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 export function useProgressiveImage(lowSrc: string, highSrc?: string) {
-  const [src, setSrc] = useState(lowSrc || "/logo.png");
+  const [src, setSrc] = useState(lowSrc || "/245.jpg");
   // Only blur if highSrc is provided AND different from lowSrc
   const [isBlurred, setIsBlurred] = useState(!!highSrc && highSrc !== lowSrc);
 
@@ -21,8 +21,8 @@ export function useProgressiveImage(lowSrc: string, highSrc?: string) {
     };
 
     img.onerror = () => {
-      if (src !== "/logo.png") {
-        setSrc("/logo.png");
+      if (src !== "/245.jpg") {
+        setSrc("/245.jpg");
         setIsBlurred(false);
       }
     };
@@ -63,8 +63,8 @@ export default function ProgressiveImage({
 
       onError={(e) => {
         const target = e.currentTarget as HTMLImageElement;
-        if (target.src !== "/logo.png") {
-          target.src = "/logo.png";
+        if (target.src !== "/245.jpg") {
+          target.src = "/245.jpg";
         }
       }}
     />
