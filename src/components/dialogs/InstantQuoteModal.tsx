@@ -253,19 +253,28 @@ const InstantQuoteModal = ({
     ));
   };
 
+
+
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       {trigger ? (
         <DialogTrigger asChild>{trigger}</DialogTrigger>
       ) : (
-        <DialogTrigger asChild>
-          <Button
-            variant="secondary"
-            className="w-1/2 text-center text-btn text-white bg-apex-blue hover:bg-apex-blue"
-          >
-            Quote Now
-          </Button>
-        </DialogTrigger>
+        // <DialogTrigger asChild>
+        //   <Button
+        //     variant="secondary"
+        //     className="w-1/2 text-center text-btn text-white bg-apex-blue hover:bg-apex-blue"
+      //   
+        //     Quote Now
+        //   </Button>
+        // </DialogTrigger>
+        <Button
+          onClick={()=>router.push("/contact-us")}
+          variant="secondary"
+          className="w-1/2 text-center text-btn text-white bg-apex-blue hover:bg-apex-blue"
+        >
+          Quote Now
+        </Button>
       )}
       <DialogContent className="max-w-[95%] sm:max-w-xl max-h-[90vh] overflow-y-auto rounded-sm no-scrollbar">
         <DialogHeader>
