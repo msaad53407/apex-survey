@@ -13,6 +13,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 const Reviews = () => {
   const isMobile = useIsMobile(500);
@@ -38,7 +39,7 @@ const Reviews = () => {
         <div className="flex flex-col items-center gap-2 py-6">
           <div className="flex flex-col items-center gap-1">
             <div className="flex items-center gap-3">
-            <span className="text-6xl font-bold text-apex-blue">4.9</span>
+              <span className="text-6xl font-bold text-apex-blue">4.9</span>
               <div className="flex flex-col justify-center">
                 <span className="text-base text-apex-blue font-medium">
                   Overall rating
@@ -152,8 +153,9 @@ export const ReviewCard = ({
     <Card className={cn("p-0 shadow-lg border-0", className)}>
       <CardHeader className="p-3 lg:p-6">
         <div className="size-14 flex items-center justify-center">
-          <Image
-            src={image}
+          <ProgressiveImage
+            lowSrc="/243.jpg"
+            highSrc={image}
             alt="Review Card"
             width={100}
             height={100}
@@ -188,3 +190,4 @@ export const ReviewCard = ({
     </Card>
   );
 };
+

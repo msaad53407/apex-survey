@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 export const serviceCards = [
   {
@@ -59,13 +59,6 @@ export const serviceCards = [
     description:
       "Our fire alarm testing service ensures your fire detection and alarm systems are functioning correctly. We provide comprehensive testing, maintenance, and certification to keep your property safe and compliant.",
   },
-  // {
-  //   image: "/commercial-epc.jpg",
-  //   title: "Commercial EPC",
-  //   link: "commercial-epc",
-  //   description:
-  //     "We provide Energy Performance Certificates for commercial properties. Our qualified assessors evaluate your building's energy efficiency and provide ratings along with recommendations to improve energy performance.",
-  // },
 ];
 
 const Services = () => {
@@ -83,8 +76,9 @@ const Services = () => {
             className="flex flex-col items-center relative gap-4 mb-20 lg:mb-auto justify-center lg:justify-between flex-nowrap w-full max-h-full h-full"
           >
             <div className="flex items-center justify-center w-full h-full">
-              <Image
-                src={card.image}
+              <ProgressiveImage
+                lowSrc="/243.jpg"
+                highSrc={card.image}
                 alt={card.title}
                 width={1000}
                 height={1000}
@@ -104,3 +98,4 @@ const Services = () => {
 };
 
 export default Services;
+

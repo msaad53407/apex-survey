@@ -3,7 +3,6 @@
 import React from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 import { Button } from "./ui/button";
-import Image from "next/image";
 import Link from "next/link";
 import {
   Accordion,
@@ -12,6 +11,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import { ChevronUp } from "lucide-react";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 type MoblileNavbarMenuProps = {
   navLinks: {
@@ -44,8 +44,9 @@ const MobileNavbarMenu = ({
           className="bg-transparent inline-block lg:hidden items-center justify-center active:bg-transparent hover:bg-transparent"
           size="icon"
         >
-          <Image
-            src={"/icons/hamburger.svg"}
+          <ProgressiveImage
+            lowSrc="/243.jpg"
+            highSrc={"/icons/hamburger.svg"}
             alt="Hamburger"
             width={20}
             height={20}
@@ -57,8 +58,9 @@ const MobileNavbarMenu = ({
         <SheetHeader className="!w-full">
           <div className="flex flex-row w-full items-center justify-between px-4 lg:px-16 py-3 bg-apex-dark h-max">
             <Link href="/" className="flex items-center justify-center w-44">
-              <Image
-                src={"/logo.png"}
+              <ProgressiveImage
+                lowSrc="/243.jpg"
+                highSrc={"/logo.png"}
                 alt="Logo"
                 width={100}
                 height={100}
@@ -114,3 +116,4 @@ const MobileNavbarMenu = ({
 };
 
 export default MobileNavbarMenu;
+

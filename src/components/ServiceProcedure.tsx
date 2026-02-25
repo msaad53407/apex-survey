@@ -2,8 +2,8 @@
 
 import { serviceSteps } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 const ServiceProcedure = () => {
   const [containerScrollPercentage, setContainerScrollPercentage] = useState(0);
@@ -47,8 +47,9 @@ const ServiceProcedure = () => {
                 index % 2 === 0 ? "bg-apex-blue" : "bg-apex-dark"
               )}
             >
-              <Image
-                src={step.icon}
+              <ProgressiveImage
+                lowSrc="/243.jpg"
+                highSrc={step.icon}
                 alt={step.heading}
                 width={50}
                 height={50}
@@ -61,8 +62,9 @@ const ServiceProcedure = () => {
 
             {index < serviceSteps.length - 1 && (
               <div className="absolute top-0 -right-10 size-24">
-                <Image
-                  src={"/icons/curvy-arrow.svg"}
+                <ProgressiveImage
+                  lowSrc="/243.jpg"
+                  highSrc={"/icons/curvy-arrow.svg"}
                   alt="Curvy Arrow"
                   width={50}
                   height={50}
@@ -116,3 +118,4 @@ const ServiceProcedure = () => {
 };
 
 export default ServiceProcedure;
+

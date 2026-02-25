@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import Image from "next/image";
 import Link from "next/link";
+import ProgressiveImage from "@/components/ui/ProgressiveImage";
 
 export default function Hero() {
   return (
@@ -9,12 +9,13 @@ export default function Hero() {
       <div className="relative">
         <div className="relative bg-white px-3 lg:px-5">
           <div className="absolute inset-0">
-            <Image
+            <ProgressiveImage
+              lowSrc="/243.jpg"
+              highSrc="/Hero-Banner.png"
               alt="Empowering Your Property Journey"
               className="size-full object-cover"
-              height="1000"
-              src="/Hero-Banner.png"
-              width="1000"
+              height={1000}
+              width={1000}
             />
             <div className="absolute inset-0 bg-black opacity-50" />
           </div>
@@ -40,18 +41,19 @@ export default function Hero() {
               </div>
             </div>
             <div className="relative z-10 -bottom-10 lg:absolute lg:right-0 lg:-bottom-24 2xl:-right-20">
-              <Image
-                src={"/pngwing 1.png"}
+              <ProgressiveImage
+                lowSrc="/243.jpg"
+                highSrc={"/pngwing 1.png"}
                 alt="Hero Image"
                 width={1000}
                 height={1000}
-                quality={100}
                 className="object-contain size-[70%] mx-auto lg:size-10/12 xl:size-9/12"
               />
               <div className="bg-apex-grey-bluish w-fit mx-auto lg:w-auto flex gap-8 justify-center items-center h-40 px-8">
                 <div className="flex items-start gap-4 text-white">
-                  <Image
-                    src={"/icons/ribbon.svg"}
+                  <ProgressiveImage
+                    lowSrc="/243.jpg"
+                    highSrc={"/icons/ribbon.svg"}
                     alt="Ribbon"
                     height={20}
                     width={20}
@@ -64,8 +66,9 @@ export default function Hero() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4 text-white">
-                  <Image
-                    src={"/icons/person-white.svg"}
+                  <ProgressiveImage
+                    lowSrc="/243.jpg"
+                    highSrc={"/icons/person-white.svg"}
                     alt="Person"
                     height={20}
                     width={20}
@@ -99,8 +102,9 @@ export default function Hero() {
         <div className=" w-full h-max pt-14 pb-6 px-8 bg-apex-blue text-white">
           <div className="flex flex-col xs:flex-row gap-4 lg:gap-12 items-end lg:items-center max-w-screen-xl mx-auto">
             <div className="flex gap-4 w-full lg:w-1/4">
-              <Image
-                src={"/icons/clipboard-white.svg"}
+              <ProgressiveImage
+                lowSrc="/243.jpg"
+                highSrc={"/icons/clipboard-white.svg"}
                 alt="Clipboard"
                 height={10}
                 width={10}
@@ -116,8 +120,9 @@ export default function Hero() {
               </div>
             </div>
             <div className="flex gap-4 w-full lg:w-1/4">
-              <Image
-                src={"/icons/ribbon.svg"}
+              <ProgressiveImage
+                lowSrc="/243.jpg"
+                highSrc={"/icons/ribbon.svg"}
                 alt="Ribbon"
                 height={10}
                 width={10}
@@ -137,3 +142,4 @@ export default function Hero() {
     </section>
   );
 }
+
