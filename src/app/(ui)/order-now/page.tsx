@@ -1,4 +1,4 @@
-// // @ts-nocheck
+// @ts-nocheck
 "use client";
 
 // import Counter from "@/components/Counter";
@@ -354,11 +354,11 @@
 //   );
 // };
 
-// export default OrderNow;
-import React from 'react'
 
-export const page = () => {
+const OrderNow = ()=>{
   return (
-    <div></div>
+    <>
+    </>
   )
 }
+export default OrderNow;

@@ -282,11 +282,11 @@
 //   </Suspense>
 // );
 
-// export default Checkout;
-import React from 'react'
 
-export const page = () => {
-  return (
-    <div></div>
-  )
-}
+
+const Checkout = ()=>(
+  <>
+  </>
+)
+
+export default Checkout;
