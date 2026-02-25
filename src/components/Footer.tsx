@@ -80,7 +80,7 @@ export default function Footer() {
                   />
                 </div>
                 <Link href={`tel:+${phoneNumber}`}>
-                  <h4 className="text-h4 text-white">Call Us Today</h4>
+                  <h4 className="text-h5 text-white">Call Us Today</h4>
                   <p className="text-white text-para">{phoneNumber}</p>
                 </Link>
               </div>

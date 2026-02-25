@@ -17,7 +17,7 @@ const Header = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<header className="flex flex-col w-full">
+		<header className="flex flex-col w-full relative z-[60]">
 			<div className="flex flex-row w-full items-center justify-between px-4 lg:px-16 py-3 bg-apex-dark h-max">
 				<Link
 					href="/"
@@ -86,7 +86,7 @@ const Header = () => {
 						</DropdownMenuContent>
 					</DropdownMenu>
 				</div>
-				<div className="flex w-max gap-4 items-center">
+				{/* <div className="flex w-max gap-4 items-center">
 					<Link
 						href={"/checkout"}
 						className="p-2 flex items-center justify-center">
@@ -103,7 +103,7 @@ const Header = () => {
 						href={"/order-now"}>
 						<p className="text-small font-bold text-white">Order Online</p>
 					</Link>
-				</div>
+				</div> */}
 			</nav>
 		</header>
 	);

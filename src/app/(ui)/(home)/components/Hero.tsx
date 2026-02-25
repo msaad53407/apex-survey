@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="w-full">
+    <section className="w-full overflow-hidden">
       <div className="relative">
         <div className="relative bg-white px-3 lg:px-5">
           <div className="absolute inset-0">
@@ -18,8 +18,8 @@ export default function Hero() {
             />
             <div className="absolute inset-0 bg-black opacity-50" />
           </div>
-          <div className="relative w-full px-6 lg:px-8 max-w-screen-xl xl:mx-auto">
-            <div className="flex justify-between items-center py-6 lg:py-20 lg:flex-row flex-col-reverse">
+          <div className="relative w-full px-6 lg:px-8 max-w-screen-xl xl:mx-auto min-h-[450px] lg:min-h-[550px]">
+            <div className="flex justify-between items-start py-6 lg:py-20 lg:flex-row flex-col-reverse">
               <div className="flex flex-col space-y-6 w-full lg:w-[35%] 2xl:w-1/2">
                 <h3 className="text-h4 lg:text-h3 text-white">
                   Empowering Your Property Journey with safe electrical systems
@@ -72,7 +72,7 @@ export default function Hero() {
                   />
                   <div className="space-y-1">
                     <span className="text-h5">
-                      2540<sup>+</sup>
+                      1k<sup>+</sup>
                     </span>
                     <p className="text-para">Clients Satisfied</p>
                   </div>
