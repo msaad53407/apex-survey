@@ -37,9 +37,9 @@ const ContactUs = () => {
                     className="object-contain size-fit text-white"
                   />
                   {info.type.includes("Office") ? (
-                    <pre className="text-small text-white">{info.details}</pre>
+                    <pre className="text-md text-white">{info.details}</pre>
                   ) : (
-                    <p className="text-small text-white">{info.details}</p>
+                    <p className="text-md text-white">{info.details}</p>
                   )}
                 </div>
               </div>
