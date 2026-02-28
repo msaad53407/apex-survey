@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from "react";
+import ProgressiveImage from "@/components/ui/ProgressiveImage";
 
 const teamCards = [
   {
@@ -46,12 +46,12 @@ const Team = () => {
             key={index}
             className="w-[48%] lg:w-[18%] h-auto mx-auto flex flex-col items-center"
           >
-            <Image
-              src={member.image}
+            <ProgressiveImage
+              lowSrc="/243.jpg"
+              highSrc={member.image}
               alt={member.name}
               width={1000}
               height={1000}
-              quality={100}
               className="object-cover size-full"
             />
             <div className="flex flex-col items-center w-max gap-2">
@@ -68,3 +68,4 @@ const Team = () => {
 };
 
 export default Team;
+

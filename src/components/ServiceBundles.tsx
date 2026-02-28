@@ -5,9 +5,11 @@ import { serviceBundles, services } from "@/lib/constants";
 import { Button } from "./ui/button";
 import { Check, Star } from "lucide-react";
 import InstantQuoteModal from "./dialogs/InstantQuoteModal";
+import { useRouter } from "next/navigation";
 
 const ServiceBundles = () => {
   const [openModalId, setOpenModalId] = useState<string | null>(null);
+  const router = useRouter();
 
   return (
     <section className="px-7 lg:px-10 py-16 flex flex-col gap-8 max-w-screen-xl lg:min-w-[1024px] xl:min-w-[1280px] mx-auto bg-white">
@@ -74,7 +76,7 @@ const ServiceBundles = () => {
                 </div>
 
                 {/* CTA Button */}
-                <InstantQuoteModal
+                {/* <InstantQuoteModal
                   open={openModalId === bundle.id}
                   onOpenChange={(open) =>
                     setOpenModalId(open ? bundle.id : null)
@@ -94,7 +96,17 @@ const ServiceBundles = () => {
                       Get Instant Quote
                     </Button>
                   }
-                />
+                /> */}
+                <Button
+                      className={`w-full py-6 font-bold text-small uppercase tracking-wide ${
+                        bundle.isPopular
+                          ? "bg-apex-blue hover:bg-apex-blue/90 text-black"
+                          : "bg-gray-800 hover:bg-gray-700 text-white"
+                      }`}
+                      onClick={()=>router.push("/contact-us")}
+                    >
+                      Get Instant Quote
+                    </Button>
               </div>
             </div>
           );

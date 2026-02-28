@@ -1,6 +1,6 @@
 import { aboutUsServices } from "@/lib/constants";
-import Image from "next/image";
 import React from "react";
+import ProgressiveImage from "@/components/ui/ProgressiveImage";
 
 const About = () => {
   return (
@@ -9,12 +9,12 @@ const About = () => {
       id="about"
     >
       <div className="w-full lg:w-[45%] flex items-center justify-center">
-        <Image
-          src={"/About-us-image.png"}
+        <ProgressiveImage
+          lowSrc="/243.jpg"
+          highSrc={"/About-us-image.png"}
           alt={"About Us Image"}
           width={1000}
           height={1000}
-          quality={100}
           className={"object-cover size-full"}
         />
       </div>
@@ -37,8 +37,9 @@ const About = () => {
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between">
             {aboutUsServices.map(({ name, description }, index) => (
               <li className="flex flex-row gap-2" key={index}>
-                <Image
-                  src={"/icons/check-icon.svg"}
+                <ProgressiveImage
+                  lowSrc="/243.jpg"
+                  highSrc={"/icons/check-icon.svg"}
                   alt={"Check Icon"}
                   width={20}
                   height={20}
@@ -58,3 +59,4 @@ const About = () => {
 };
 
 export default About;
+

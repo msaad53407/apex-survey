@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   usefulLinks,
@@ -6,6 +5,7 @@ import {
   footerNavLinks,
   contactInformation,
 } from "@/lib/constants";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 export default function Footer() {
   const phoneNumber = contactInformation.filter((contact) =>
@@ -20,12 +20,12 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-y-6 xl:gap-x-6">
           <div className="flex flex-col gap-4 w-full lg:w-32 xl:w-1/3 py-4">
             <Link href="/" className="flex items-center justify-center w-[70%] sm:w-1/2 lg:w-[80%] mx-auto">
-              <Image
-                src={"/logo.png"}
+              <ProgressiveImage
+                lowSrc="/243.jpg"
+                highSrc={"/logo.png"}
                 alt="Logo"
                 width={1000}
                 height={1000}
-                quality={100}
                 className="object-cover size-full"
               />
             </Link>
@@ -72,15 +72,17 @@ export default function Footer() {
               </div>
               <div className="flex gap-4">
                 <div className="bg-apex-blue p-3 h-max self-start rounded-sm">
-                  <Image
-                    src={"/icons/phone.svg"}
+                  <ProgressiveImage
+                    lowSrc="/243.jpg"
+                    highSrc={"/icons/phone.svg"}
                     alt={"Phone"}
                     width={20}
                     height={20}
+                    className="size-5 object-contain"
                   />
                 </div>
                 <Link href={`tel:+${phoneNumber}`}>
-                  <h4 className="text-h4 text-white">Call Us Today</h4>
+                  <h4 className="text-h5 text-white">Call Us Today</h4>
                   <p className="text-white text-para">{phoneNumber}</p>
                 </Link>
               </div>
@@ -94,22 +96,24 @@ export default function Footer() {
           </p>
           <div className="flex lg:hidden flex-col gap-4 items-center">
             <div className="flex items-center gap-4">
-              <Image
-                src={"/icons/web.svg"}
+              <ProgressiveImage
+                lowSrc="/243.jpg"
+                highSrc={"/icons/web.svg"}
                 alt={"Web"}
                 width={12}
                 height={12}
-                className="object-contain size-fit text-white"
+                className="size-3 object-contain text-white"
               />
               <p className="text-para text-white">{email}</p>
             </div>
             <div className="flex items-center gap-4">
-              <Image
-                src={"/icons/phone.svg"}
+              <ProgressiveImage
+                lowSrc="/243.jpg"
+                highSrc={"/icons/phone.svg"}
                 alt={"Phone"}
                 width={12}
                 height={12}
-                className="object-contain size-fit text-white"
+                className="size-3 object-contain text-white"
               />
               <p className="text-para text-white">Call Us Free:{phoneNumber}</p>
             </div>
@@ -117,13 +121,13 @@ export default function Footer() {
           <div className="w-max flex gap-4 items-center self-center md:self-auto order-first lg:order-last">
             {socialLinks.map((link) => (
               <Link href={link.path} key={link.name}>
-                <Image
-                  src={link.iconPath}
+                <ProgressiveImage
+                  lowSrc="/243.jpg"
+                  highSrc={link.iconPath}
                   alt={link.name}
                   width={18}
                   height={18}
-                  style={{ color: "white" }}
-                  className="object-contain size-fit text-white"
+                  className="size-[18px] object-contain text-white"
                 />
               </Link>
             ))}
@@ -133,3 +137,4 @@ export default function Footer() {
     </footer>
   );
 }
+

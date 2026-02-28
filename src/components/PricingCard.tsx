@@ -1,6 +1,6 @@
 import { CardHeader, CardContent, Card } from "@/components/ui/card";
-import Image from "next/image";
 import { prisma } from "../../lib/db";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 export async function PricingCard() {
   const pricing = await prisma.pricing.findMany({
@@ -41,8 +41,9 @@ export async function PricingCard() {
             <div className="space-y-3">
               {pricingItem.surveyType.map((perk, index) => (
                 <div className="flex items-center gap-3" key={index}>
-                  <Image
-                    src={"/icons/check-icon.svg"}
+                  <ProgressiveImage
+                    lowSrc="/243.jpg"
+                    highSrc={"/icons/check-icon.svg"}
                     alt="CheckIcon"
                     width={10}
                     height={10}
@@ -58,3 +59,4 @@ export async function PricingCard() {
     </div>
   );
 }
+

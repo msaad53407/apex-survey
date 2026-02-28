@@ -482,7 +482,7 @@ export const contactInformation = [
   {
     type: "Client Support",
     icon: "/icons/phone.svg",
-    details: "442039942679",
+    details: "+442039942679",
   },
   {
     type: "Email",
@@ -490,7 +490,7 @@ export const contactInformation = [
     details: "contact@fairdealelectrical.co.uk",
   },
   {
-    type: "Registered Office Address",
+    type: "Address",
     icon: "/icons/mail-white.svg",
     details: `FAIRDEAL ELECTRICAL SERVICES LIMITED
 6th Floor, 37 Lombard Street

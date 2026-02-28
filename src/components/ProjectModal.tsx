@@ -11,6 +11,7 @@ import {
 import { useActiveProject } from "@/hooks/useActiveProject";
 import Image from "next/image";
 import Link from "next/link";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 const ProjectModal = () => {
 	const { setActiveProject, activeProject } = useActiveProject();
@@ -37,16 +38,13 @@ const ProjectModal = () => {
 					</DialogHeader>
 					<div className="space-y-8">
 						<div className="space-y-4">
-							<Image
-								placeholder="blur"
-								blurDataURL="/placeholder.jpg"
-								src={activeProject.thumbnail}
+							<ProgressiveImage
+								lowSrc="/243.jpg"
+								highSrc={activeProject.thumbnail}
 								alt={activeProject.title}
 								width={1000}
 								height={1000}
 								className="object-cover w-full rounded-xl aspect-video min-h-[300px]"
-								priority
-								quality={100}
 							/>
 							<div className="flex gap-4 items-center justify-between">
 								<h3 className="text-2xl font-medium text-apex-blue">
@@ -63,17 +61,6 @@ const ProjectModal = () => {
 											? "Commercial"
 											: "Residential"}
 									</span>
-									{/* <Button
-										className="bg-apex-blue hover:bg-apex-blue/90 text-white px-4 py-2 rounded-full"
-										asChild>
-										<Link
-											href={`/project/${activeProject?.slug}`}
-											onClick={() => {
-												setActiveProject(null);
-											}}>
-											View Details
-										</Link>
-									</Button> */}
 								</div>
 							</div>
 						</div>
@@ -90,12 +77,13 @@ const ProjectModal = () => {
 								{activeProject.features.map((feature, index) => (
 									<li key={index} className="flex items-start gap-2">
 										<span className="mt-1">
-											<Image
-												src="/icons/check-icon.svg"
+											<ProgressiveImage
+												lowSrc="/243.jpg"
+												highSrc="/icons/check-icon.svg"
 												alt="Check"
 												width={16}
 												height={16}
-												className="text-apex-blue"
+												className="size-4 object-contain text-apex-blue"
 											/>
 										</span>
 										<span className="text-gray-600">{feature}</span>
@@ -112,10 +100,10 @@ const ProjectModal = () => {
 								<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 									{activeProject.images.map((image, index) => (
 										<div key={index} className="relative aspect-video">
-											<Image
-												src={image.src}
+											<ProgressiveImage
+												lowSrc="/243.jpg"
+												highSrc={image.src}
 												alt={image.alt}
-												fill
 												className="object-cover rounded-lg"
 											/>
 										</div>
@@ -131,3 +119,4 @@ const ProjectModal = () => {
 };
 
 export default ProjectModal;
+

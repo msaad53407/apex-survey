@@ -6,6 +6,8 @@ import PricingForm from '../../components/PricingForm';
 import { prisma } from '../../../../../lib/db';
 import EditPricingForm from '../../components/EditPricingForm';
 
+export const dynamic = 'force-dynamic';
+
 const EditPricingPage = async ({ params }: { params: { id: string } }) => {
     const Pricing = await prisma.pricing.findUnique({
         where: {

@@ -13,6 +13,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 const Reviews = () => {
   const isMobile = useIsMobile(500);
@@ -38,18 +39,18 @@ const Reviews = () => {
         <div className="flex flex-col items-center gap-2 py-6">
           <div className="flex flex-col items-center gap-1">
             <div className="flex items-center gap-3">
-              <span className="text-6xl font-bold text-apex-blue">4.5</span>
+              <span className="text-6xl font-bold text-apex-blue">5.0</span>
               <div className="flex flex-col justify-center">
                 <span className="text-base text-apex-blue font-medium">
                   Overall rating
                 </span>
                 <span className="text-base font-bold text-gray-800">
-                  {reviewData.length} total ratings
+                  {reviewData.length + 460}+ total ratings
                 </span>
               </div>
             </div>
             <div className="flex gap-1 mt-1">
-              {[1, 2, 3, 4].map((star) => (
+              {[1, 2, 3, 4, 5].map((star) => (
                 <svg
                   key={star}
                   className="w-8 h-8 fill-yellow-400"
@@ -58,18 +59,6 @@ const Reviews = () => {
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               ))}
-              <svg className="w-8 h-8" viewBox="0 0 24 24">
-                <defs>
-                  <linearGradient id="halfStar">
-                    <stop offset="50%" stopColor="#FBBF24" />
-                    <stop offset="50%" stopColor="#E5E7EB" />
-                  </linearGradient>
-                </defs>
-                <path
-                  fill="url(#halfStar)"
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                />
-              </svg>
             </div>
           </div>
         </div>
@@ -152,8 +141,9 @@ export const ReviewCard = ({
     <Card className={cn("p-0 shadow-lg border-0", className)}>
       <CardHeader className="p-3 lg:p-6">
         <div className="size-14 flex items-center justify-center">
-          <Image
-            src={image}
+          <ProgressiveImage
+            lowSrc="/243.jpg"
+            highSrc={image}
             alt="Review Card"
             width={100}
             height={100}
@@ -188,3 +178,4 @@ export const ReviewCard = ({
     </Card>
   );
 };
+

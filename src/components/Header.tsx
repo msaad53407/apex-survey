@@ -1,7 +1,6 @@
 "use client";
 
 import { contactLinks, navLinks } from "@/lib/constants";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import MobileNavbarMenu from "./MobileNavbarMenu";
@@ -12,18 +11,20 @@ import {
 	DropdownMenuContent,
 	DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 const Header = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<header className="flex flex-col w-full">
+		<header className="flex flex-col w-full relative z-[60]">
 			<div className="flex flex-row w-full items-center justify-between px-4 lg:px-16 py-3 bg-apex-dark h-max">
 				<Link
 					href="/"
 					className="flex items-center justify-center w-44 sm:w-48 ">
-					<Image
-						src={"/logo.png"}
+					<ProgressiveImage
+						lowSrc="/243.jpg"
+						highSrc={"/logo.png"}
 						alt="Logo"
 						width={100}
 						height={100}
@@ -41,11 +42,13 @@ const Header = () => {
 							target="_blank"
 							key={link.web_link || link.phone_link}
 							className="flex flex-row items-center gap-4">
-							<Image
-								src={link.web_iconPath || link.phone_iconPath || ""}
+							<ProgressiveImage
+								lowSrc="/243.jpg"
+								highSrc={link.web_iconPath || link.phone_iconPath || ""}
 								alt={link.web_text || link.phone_text || ""}
 								width={20}
 								height={20}
+								className="size-5 object-contain"
 							/>
 							<p className="text-para text-white">
 								{link.web_text || link.phone_text}
@@ -64,11 +67,13 @@ const Header = () => {
 					<DropdownMenu open={open} onOpenChange={() => setOpen(!open)}>
 						<DropdownMenuTrigger className="flex flex-row gap-2 items-center">
 							<p className="text-para text-white font-medium">Our Services</p>
-							<Image
-								src={"/icons/chevron-down.svg"}
+							<ProgressiveImage
+								lowSrc="/243.jpg"
+								highSrc={"/icons/chevron-down.svg"}
 								alt={"Chevron Down"}
 								width={12}
 								height={12}
+								className="size-3 object-contain"
 							/>
 						</DropdownMenuTrigger>
 						<DropdownMenuContent className="rounded-sm w-max flex gap-2 flex-col">
@@ -86,27 +91,10 @@ const Header = () => {
 						</DropdownMenuContent>
 					</DropdownMenu>
 				</div>
-				<div className="flex w-max gap-4 items-center">
-					<Link
-						href={"/checkout"}
-						className="p-2 flex items-center justify-center">
-						<Image
-							src={"/icons/cart.svg"}
-							alt={"Cart"}
-							width={20}
-							height={20}
-							className="object-cover size-full"
-						/>
-					</Link>
-					<Link
-						className="bg-apex-blue p-3 rounded-sm hover:bg-apex-blue active:bg-apex-blue"
-						href={"/order-now"}>
-						<p className="text-small font-bold text-white">Order Online</p>
-					</Link>
-				</div>
 			</nav>
 		</header>
 	);
 };
 
 export default Header;
+

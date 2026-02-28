@@ -3,138 +3,210 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
+import { 
+  User, 
+  Mail, 
+  Phone, 
+  MessageSquare, 
+  ArrowRight, 
+  Loader2 
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-// import { toast } from "@/components/ui/use-toast";
-import { ArrowRightIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { FormSchema } from "@/lib/schema";
 
-const items = [
-  {
-    id: "recents",
-    label: "Recents",
-  },
-  {
-    id: "home",
-    label: "Home",
-  },
-  {
-    id: "applications",
-    label: "Applications",
-  },
-  {
-    id: "desktop",
-    label: "Desktop",
-  },
-  {
-    id: "downloads",
-    label: "Downloads",
-  },
-  {
-    id: "documents",
-    label: "Documents",
-  },
-] as const;
-
-
+const FormSchema = z.object({
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
+  number: z.string().min(1, "Number is required"),
+  email: z.string().email("Invalid email address"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
 
 export function ProblemForm() {
+  const [loading, setLoading] = useState(false);
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      items: [],
+      firstName: "",
+      lastName: "",
+      number: "",
+      email: "",
+      message: "",
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    // toast({
-    //   title: "You submitted the following values:",
-    //   description: (
-    //     <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-    //       <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-    //     </pre>
-    //   ),
-    // });
-    alert(JSON.stringify(data, null, 2));
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    setLoading(true);
+    try {
+      const response = await axios.post("/api/contact", data);
+      if (response.data.success) {
+        toast.success("Message sent successfully!");
+        form.reset();
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   }
+
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* First Name */}
+          <FormField
+            control={form.control}
+            name="firstName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="flex items-center gap-2 text-gray-700">
+                  <User className="size-4 text-apex-blue" />
+                  First Name
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    {...field}
+                    placeholder="John"
+                    className="focus:border-apex-blue transition-all duration-300"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Last Name */}
+          <FormField
+            control={form.control}
+            name="lastName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="flex items-center gap-2 text-gray-700">
+                  <User className="size-4 text-apex-blue" />
+                  Last Name
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    {...field}
+                    placeholder="Doe"
+                    className="focus:border-apex-blue transition-all duration-300"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+
+        {/* Number */}
         <FormField
           control={form.control}
-          name="items"
-          render={() => (
+          name="number"
+          render={({ field }) => (
             <FormItem>
-              <div className="mb-4">
-                <FormLabel className="text-btn font-bold">
-                  Depending on the type and nature of your enquiry. Please
-                  select one of the relevant option below.
-                </FormLabel>
-              </div>
-              {items.map((item) => (
-                <FormField
-                  key={item.id}
-                  control={form.control}
-                  name="items"
-                  render={({ field }) => {
-                    return (
-                      <FormItem
-                        key={item.id}
-                        className={cn(
-                          "flex flex-row items-start justify-between space-x-3 space-y-0 w-full p-3 border border-r-gray-50 rounded-md",
-                          field.value?.includes(item.id) && "bg-apex-blue"
-                        )}
-                      >
-                        <FormControl className="w-full flex flex-row items-center justify-between">
-                          <Checkbox
-                            checked={field.value?.includes(item.id)}
-                            onCheckedChange={(checked) => {
-                              return checked
-                                ? field.onChange([...field.value, item.id])
-                                : field.onChange(
-                                    field.value?.filter(
-                                      (value) => value !== item.id
-                                    )
-                                  );
-                            }}
-                            className="data-[state=checked]:bg-transparent data-[state=checked]:text-white border-0 flex items-center justify-between"
-                          >
-                            <FormLabel
-                              className={cn(
-                                "text-para text-black",
-                                field.value?.includes(item.id) && "text-white"
-                              )}
-                            >
-                              {item.label}
-                            </FormLabel>
-                          </Checkbox>
-                        </FormControl>
-                      </FormItem>
-                    );
-                  }}
+              <FormLabel className="flex items-center gap-2 text-gray-700">
+                <Phone className="size-4 text-apex-blue" />
+                Phone Number
+              </FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  type="tel"
+                  placeholder="+44 123 456 7890"
+                  className="focus:border-apex-blue transition-all duration-300"
                 />
-              ))}
+              </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
+
+        {/* Email */}
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="flex items-center gap-2 text-gray-700">
+                <Mail className="size-4 text-apex-blue" />
+                Email Address
+              </FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  type="email"
+                  placeholder="john.doe@example.com"
+                  className="focus:border-apex-blue transition-all duration-300"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        {/* Message */}
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="flex items-center gap-2 text-gray-700">
+                <MessageSquare className="size-4 text-apex-blue" />
+                Your Message
+              </FormLabel>
+              <FormControl>
+                <textarea
+                  {...field}
+                  rows={4}
+                  placeholder="Tell us how we can help you..."
+                  className={cn(
+                    "flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+                    "focus:border-apex-blue transition-all duration-300 resize-none"
+                  )}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        {/* Submit Button */}
         <Button
           type="submit"
-          className="w-full flex justify-center bg-apex-blue text-white gap-2 hover:bg-apex-blue"
+          disabled={loading}
+          className={cn(
+            "w-full h-12 flex justify-center bg-apex-blue text-white gap-2 hover:bg-blue-600 transition-all duration-300 transform active:scale-[0.98]",
+            "shadow-md hover:shadow-lg disabled:opacity-70 font-semibold text-base"
+          )}
         >
-          <span className="text-para font-medium">Go</span>{" "}
-          <ArrowRightIcon className="size-5" />
+          {loading ? (
+            <>
+              <Loader2 className="size-5 animate-spin" />
+              <span>Sending Message...</span>
+            </>
+          ) : (
+            <>
+              <span>Send Message</span>
+              <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />
+            </>
+          )}
         </Button>
       </form>
     </Form>

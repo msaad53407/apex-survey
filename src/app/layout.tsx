@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Lato, Montserrat } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -7,7 +7,16 @@ import Footer from "@/components/Footer";
 import toast, { Toaster } from "react-hot-toast";
 import { ProjectProvider } from "@/context/ActiveProjectContext";
 
-const OpenSans = Open_Sans({ subsets: ["latin"], variable: "--font-sans" });
+const lato = Lato({ 
+	subsets: ["latin"], 
+	weight: ["100", "300", "400", "700", "900"],
+	variable: "--font-lato" 
+});
+
+const montserrat = Montserrat({ 
+	subsets: ["latin"], 
+	variable: "--font-montserrat" 
+});
 
 export const metadata: Metadata = {
 	title: "Fairdeal Electrical",
@@ -25,7 +34,8 @@ export default function RootLayout({
 			<body
 				className={cn(
 					"bg-background font-sans antialiased min-w-full",
-					OpenSans.variable
+					lato.variable,
+					montserrat.variable
 				)}>
 				<ProjectProvider>
 					<main className="min-h-screen">

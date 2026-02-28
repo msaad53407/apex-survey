@@ -11,6 +11,7 @@ import {
 	CardFooter,
 	CardHeader,
 } from "@/components/ui/card";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 export const ProjectCard = ({
 	project,
@@ -29,12 +30,10 @@ export const ProjectCard = ({
 		<Card className={cn("flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow", className)}>
 			<CardHeader className="p-0">
 				<div className={cn("relative overflow-hidden aspect-video")}>
-					<Image
-						src={project.thumbnail}
+					<ProgressiveImage
+						lowSrc="/243.jpg"
+						highSrc={project.thumbnail}
 						alt={project.title}
-						placeholder="blur"
-						blurDataURL="/placeholder.jpg"
-						fill
 						className="object-cover transition-transform hover:scale-105 overflow-hidden rounded-t-xl"
 					/>
 					<div className="absolute bottom-2 right-2 bg-apex-blue text-white px-2 py-1 rounded text-sm capitalize">
@@ -54,12 +53,13 @@ export const ProjectCard = ({
 					<ul className="grid grid-cols-1 gap-2">
 						{project.features.slice(0, 3).map((feature, index) => (
 							<li key={index} className="flex items-center gap-2">
-								<Image
-									src="/icons/check-icon.svg"
+								<ProgressiveImage
+									lowSrc="/243.jpg"
+									highSrc="/icons/check-icon.svg"
 									alt="check"
 									width={16}
 									height={16}
-									className="flex-shrink-0"
+									className="flex-shrink-0 size-4 object-contain"
 								/>
 								<span className="text-sm text-muted-foreground">{feature}</span>
 							</li>
@@ -77,3 +77,4 @@ export const ProjectCard = ({
 		</Card>
 	);
 };
+

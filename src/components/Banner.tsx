@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React from "react";
+import ProgressiveImage from "./ui/ProgressiveImage";
 
 type BannerProps = {
   children: React.ReactNode;
@@ -12,11 +12,11 @@ const Banner = ({ image, children, className }: BannerProps) => {
   return (
     <div className="relative w-full h-auto min-h-96">
       <div className="absolute inset-0">
-        <Image
-          src={image}
+        <ProgressiveImage
+          lowSrc="/243.jpg"
+          highSrc={image}
           width={1000}
           height={1000}
-          quality={100}
           alt="BannerImage"
           className="object-cover size-full"
         />
@@ -34,3 +34,4 @@ const Banner = ({ image, children, className }: BannerProps) => {
 };
 
 export default Banner;
+
