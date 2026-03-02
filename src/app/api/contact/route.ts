@@ -9,7 +9,7 @@ export async function POST(req: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "Apex Survey <onboarding@resend.dev>",
-      to: ["034217602ab@gmail.com"],
+      to: ["contact@fairdealelectrical.co.uk"],
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
