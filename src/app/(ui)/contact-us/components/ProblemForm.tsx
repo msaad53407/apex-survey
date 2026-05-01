@@ -51,6 +51,7 @@ export function ProblemForm() {
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     setLoading(true);
     try {
+      
       const response = await axios.post("/api/contact", data);
       if (response.data.success) {
         toast.success("Message sent successfully!");
