@@ -8,10 +8,11 @@ import EditPricingForm from '../../components/EditPricingForm';
 
 export const dynamic = 'force-dynamic';
 
-const EditPricingPage = async ({ params }: { params: { id: string } }) => {
+const EditPricingPage = async ({ params }: { params: Promise<{ id: string }> }) => {
+    const { id } = await params;
     const Pricing = await prisma.pricing.findUnique({
         where: {
-            id: params.id
+            id: id
         },
 
     })

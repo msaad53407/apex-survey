@@ -26,10 +26,9 @@ const ServiceProcedure = () => {
   return (
     <section className="px-7 lg:px-11 flex flex-col gap-6 mb-20 w-full  max-w-screen-xl mx-auto">
       <div className="w-full lg:w-4/6 space-y-2 flex flex-col items-center justify-center self-center">
-        <h3 className="text-h3 text-center">Four Steps to Get Our Services</h3>
-        <p className="text-para text-center">
-          Follow these simple steps to easily obtain our services, ensuring a
-          seamless and efficient process from start to finish.
+        <h3 className="text-h3 text-center font-bold">Four Simple Steps to Get Your Certificate</h3>
+        <p className="text-para text-center text-gray-700 leading-relaxed max-w-2xl">
+          Getting your electrical safety certificate with Fairdeal is straightforward:
         </p>
       </div>
       <div

@@ -5,10 +5,10 @@ import { update } from "@/lib/action";
 
 export async function DELETE(
 	req: Request,
-	{ params }: { params: { id: string } },
+	{ params }: { params: Promise<{ id: string }> },
 ) {
 	try {
-		const { id } = params;
+		const { id } = await params;
 
 		const deletepricing = await prisma.pricing.delete({
 			where: {

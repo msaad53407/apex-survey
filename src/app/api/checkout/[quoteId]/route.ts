@@ -6,11 +6,11 @@ import { update } from "@/lib/action";
 
 export async function POST(
 	req: Request,
-	{ params }: { params: { quoteId: string } },
+	{ params }: { params: Promise<{ quoteId: string }> },
 ) {
 	try {
 		const requestData = await req.json();
-		const { quoteId } = params;
+		const { quoteId } = await params;
 
 		const checkout = await prisma.checkout.create({
 			data: {

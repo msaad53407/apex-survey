@@ -697,27 +697,27 @@ export const contactLinks = [
 export const serviceSteps = [
   {
     icon: "/icons/cart.svg",
-    heading: "Place Order Online",
+    heading: "Place Your Order Online",
     description:
-      "Browse our services and easily place your order online through our user-friendly platform. Ensure all required details are filled out accurately to avoid any delays",
+      "Choose the certificate or service you need and book in minutes.",
   },
   {
     icon: "/icons/clipboard-check.svg",
-    heading: "Electrical Assessment Booked",
+    heading: "Assessment Booked",
     description:
-      "Once your order is placed, we will schedule a assessment at your convenience. Our team will reach out to confirm the appointment and gather any additional information needed",
+      "Our team confirms your appointment at a time that suits you.",
   },
   {
     icon: "/icons/search.svg",
-    heading: "Start Electrical Assessment",
+    heading: "On-Site Inspection",
     description:
-      "Our professional team will conduct a thorough assessment of your property, ensuring all measurements and data are collected precisely and accurately",
+      "A qualified engineer carries out a full assessment of your property.",
   },
   {
     icon: "/icons/certificate.svg",
     heading: "Certificate Issued",
     description:
-      "After the assessment is complete, we will issue a detailed certificate. This document will include all relevant data and findings, formally concluding the process.",
+      "You receive your completed certificate, usually within 24–48 hours.",
   },
 ];
 

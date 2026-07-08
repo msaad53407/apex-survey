@@ -27,13 +27,11 @@ const Reviews = () => {
 
   return (
     <section className="px-7 lg:px-11 flex flex-col gap-8 max-w-screen-xl w-full mx-auto">
-      <div className="space-y-2 w-full md:w-1/2 mx-auto">
-        <h3 className="text-h3 text-center w-full">What Our Customer Says</h3>
+      <div className="space-y-4 w-full md:w-3/4 mx-auto">
+        <h3 className="text-h3 text-center w-full font-bold">What Our Customers Say</h3>
 
-        <p className="text-small text-center">
-          We are a team of building physicists and engineers, software
-          developers, assessors and business management specialists and for
-          nearly 40 years we have been Making Buildings Better.
+        <p className="text-para text-center text-gray-700 leading-relaxed">
+          Fairdeal Electrical has completed hundreds of electrical safety certificates for landlords, letting agents, and businesses across London. Our customers consistently highlight our punctuality, clear communication, and thorough inspections — which is why the majority of our new work comes from repeat clients and referrals.
         </p>
         {/* Ratings Summary */}
         <div className="flex flex-col items-center gap-2 py-6">

@@ -9,14 +9,15 @@ import React from "react";
 import { serviceCards } from "@/components/Services";
 
 type ElectricalMaintenanceProps = {
-  params: {
+  params: Promise<{
     serviceName?: string;
-  };
+  }>;
 };
 
 export async function generateMetadata({ params }: ElectricalMaintenanceProps) {
+  const { serviceName } = await params;
   const selectedService = serviceCards.find(
-    (service) => service.link === params.serviceName
+    (service) => service.link === serviceName
   );
 
   return {
@@ -24,9 +25,10 @@ export async function generateMetadata({ params }: ElectricalMaintenanceProps) {
   };
 }
 
-const ElectricalMaintenance = ({ params }: ElectricalMaintenanceProps) => {
+const ElectricalMaintenance = async ({ params }: ElectricalMaintenanceProps) => {
+  const { serviceName } = await params;
   const selectedService = serviceCards.find(
-    (service) => service.link === params.serviceName
+    (service) => service.link === serviceName
   );
 
   if (!selectedService) return notFound();

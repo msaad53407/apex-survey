@@ -5,14 +5,15 @@ import { update } from "@/lib/action";
 
 export async function PUT(
 	req: Request,
-	{ params }: { params: { id: string } },
+	{ params }: { params: Promise<{ id: string }> },
 ) {
 	try {
+		const { id } = await params;
 		const data = await req.json();
 
 		const updatePricing = await prisma.pricing.update({
 			where: {
-				id: params.id,
+				id: id,
 			},
 			data: {
 				...data,

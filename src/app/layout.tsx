@@ -18,9 +18,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Fairdeal Electrical",
+  title: "Electrical Safety Certificates London | Fairdeal Electrical",
   description:
-    "Fairdeal Electrical offers top-notch electrical services including installations, rewiring, testing, fuse board repair, lighting upgrades, and smoke alarm installations. Our certified electricians ensure safety, efficiency, and compliance with all regulations for residential, commercial, and industrial properties. Contact us for reliable and professional electrical solutions.",
+    "Get fast, affordable Electrical Safety Certificates in London. EICR, PAT testing, gas safety & fire risk assessments. Get your instant quote today.",
   verification: { google: "Stn0Y17qTEgTB3H6r888OsAfMGcv1UBDAkNeaz38sDo" },
 };
 

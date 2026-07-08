@@ -8,8 +8,8 @@ export const dynamic = 'force-dynamic';
 import UserDetails from '../../components/UserDetails';
 
 
-const CheckoutDetails = async ({ params }: { params: { id: string } }) => {
-
+const CheckoutDetails = async ({ params }: { params: Promise<{ id: string }> }) => {
+    const { id } = await params;
     const checkouts = await prisma.checkout.findUnique({
         include: {
             quote: {
@@ -19,7 +19,7 @@ const CheckoutDetails = async ({ params }: { params: { id: string } }) => {
             },
         },
         where: {
-            id: params.id
+            id: id
         }
     });
     console.log('checkouts', checkouts)

@@ -13,9 +13,14 @@ const ServiceBundles = () => {
 
   return (
     <section className="px-7 lg:px-10 py-16 flex flex-col gap-8 max-w-screen-xl lg:min-w-[1024px] xl:min-w-[1280px] mx-auto bg-white">
-      <div className="space-y-2">
-        <div className="w-16 h-1 bg-apex-blue mb-3"></div>
-        <h2 className="text-h3 lg:text-h2 font-bold">Services Bundle Offers</h2>
+      <div className="space-y-4 max-w-3xl">
+        <div className="w-16 h-1 bg-apex-blue"></div>
+        <h2 className="text-h3 lg:text-h2 font-bold text-gray-900">
+          Service Bundles for Landlords and Businesses
+        </h2>
+        <p className="text-para text-gray-700 leading-relaxed">
+          To make compliance easier, we offer bundled packages that combine an EICR certificate with PAT testing, EPC, or gas safety certification — helping landlords and property managers save both time and money while staying fully compliant.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">

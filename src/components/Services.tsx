@@ -8,56 +8,56 @@ export const serviceCards = [
     title: "Electrical Installation Condition Report (EICR)",
     link: "electrical-installation-condition-report",
     description:
-      "Our comprehensive EICR service provides a thorough assessment of your property's electrical installations. We identify potential hazards, ensure compliance with current regulations, and provide detailed reports with recommendations for any necessary remedial work.",
+      "An EICR certificate is a legal requirement for landlords renting out property in England. Our engineers inspect your wiring, consumer unit, and fixed electrical installations, then issue a full report identifying any faults that need remedial work.",
   },
   {
     image: "/rewiring.jpg",
     title: "EICR Remedial Work",
     link: "eicr-remedial-work",
     description:
-      "Following an EICR inspection, our qualified electricians carry out all necessary remedial work to bring your electrical system up to current safety standards. We address any identified issues efficiently and professionally.",
+      "If your EICR inspection uncovers a C1 or C2 fault, our team can carry out the required remedial repairs quickly, so your property remains compliant without unnecessary delays.",
   },
   {
     image: "/testing.jpg",
     title: "Electrical Portable Appliance Testing (PAT)",
     link: "electrical-portable-appliance-testing",
     description:
-      "Our PAT testing service ensures all your portable electrical appliances are safe to use. We provide thorough testing and certification for businesses and landlords, helping you meet your legal obligations and keep your premises safe.",
+      "PAT testing checks the safety of portable electrical appliances in offices, HMOs, and rented properties. We offer flexible commercial and landlord PAT testing packages across London.",
   },
   {
     image: "/fuse-repairing.jpg",
-    title: "Display Energy Certificate (DEC)",
+    title: "Display Energy Certificate (DEC) & EPC",
     link: "display-energy-certificate",
     description:
-      "We provide Display Energy Certificates for public buildings, showing their energy efficiency rating. Our assessors evaluate your building's energy performance and provide recommendations for improvement.",
+      "An Energy Performance Certificate shows how energy-efficient your property is. We provide domestic and commercial EPC assessments for landlords preparing to rent or sell.",
   },
   {
     image: "/light-repairing.jpg",
-    title: "Gas Safety Certificate",
+    title: "Gas Safety Certificate (CP12)",
     link: "gas-safety-certificate",
     description:
-      "Our Gas Safe registered engineers conduct thorough gas safety inspections and provide legally required certificates for landlords and property owners. We ensure all gas appliances and installations are safe and compliant.",
+      "A landlord gas safety certificate is a legal obligation for any rented property with gas appliances. Our Gas Safe registered engineers carry out thorough gas safety inspections and issue your CP12 certificate promptly.",
   },
   {
     image: "/smoke-alarms.jpg",
     title: "Fire Risk Assessment",
     link: "fire-risk-assessment",
     description:
-      "Our comprehensive fire risk assessments identify potential fire hazards in your property. We provide detailed reports with actionable recommendations to ensure compliance with fire safety regulations and protect occupants.",
+      "Our fire risk assessment service identifies fire hazards within residential and commercial buildings, helping property owners meet their legal fire safety obligations.",
   },
   {
     image: "/electrical-ppm-image.png",
     title: "Emergency Lighting Test Report",
     link: "emergency-lighting-test-report",
     description:
-      "We provide professional testing and certification of emergency lighting systems. Our engineers ensure your emergency lighting meets all regulatory requirements and will function correctly in an emergency.",
+      "We test and certify emergency lighting systems, ensuring your building's safety systems function correctly when they're needed most.",
   },
   {
     image: "/Hero-Banner.png",
     title: "Fire Alarm Test Report",
     link: "fire-alarm-test-report",
     description:
-      "Our fire alarm testing service ensures your fire detection and alarm systems are functioning correctly. We provide comprehensive testing, maintenance, and certification to keep your property safe and compliant.",
+      "We test and certify fire alarms, ensuring your building's safety systems function correctly when they're needed most.",
   },
 ];
 

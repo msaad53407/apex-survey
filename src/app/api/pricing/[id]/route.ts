@@ -5,10 +5,10 @@ import { update } from "@/lib/action";
 
 export async function PUT(
 	req: Request,
-	{ params }: { params: { id: string } },
+	{ params }: { params: Promise<{ id: string }> },
 ) {
 	try {
-		const { id } = params;
+		const { id } = await params;
 		const requestData = await req.json();
 		const { status } = requestData;
 
