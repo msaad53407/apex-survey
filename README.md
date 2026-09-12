@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏢 Apex Survey — Property Inspection & Instant Quote Platform
 
-## Getting Started
+**Apex Survey** is a full-stack, enterprise property survey and inspection booking platform built with **Next.js 15 (Turbopack)**, **React 19**, **Prisma ORM**, and **MongoDB**. 
 
-First, run the development server:
+It provides prospective property buyers, sellers, and landlords with instant, multi-tiered survey quotes, automated checkout pipelines, and an administrative management dashboard.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Key Features
+
+- **⚡ Instant Survey Quoting Engine:** Dynamic quote calculation based on property type (residential vs. commercial), area, age, appliances, electrical circuits, and location (postcode).
+- **📊 Interactive Admin Dashboard:** Analytics and order tracking powered by **Recharts**, with status filtering (Pending, Confirmed, Completed) and pricing configuration.
+- **💳 Multi-Method Checkout:** Support for card and direct bank payment processing, identity verification, and contact-role mapping (Buyer, Seller, Landlord, Tenant, Agent).
+- **📱 Responsive & Accessible UI:** Modern component library built on top of **Radix UI**, **Tailwind CSS**, and **Embla Carousel**.
+- **🛡️ Strict Data Validation:** Full type-safety across client forms and server routes via **Zod** and **React Hook Form**.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router, Turbopack)
+- **Frontend Library:** [React 19](https://react.dev/)
+- **Database & ORM:** [MongoDB](https://www.mongodb.com/) via [Prisma ORM](https://www.prisma.io/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) + `tailwindcss-animate`
+- **UI Primitives:** [Radix UI](https://www.radix-ui.com/)
+- **Data Visualization:** [Recharts](https://recharts.org/)
+- **Validation & Forms:** [Zod](https://zod.dev/) + [React Hook Form](https://react-hook-form.com/)
+- **Carousel & Media:** [Embla Carousel](https://www.embla-carousel.com/) + [Sharp](https://sharp.pixelplumbing.com/)
+
+---
+
+## 📁 Architecture Overview
+
+```text
+src/
+├── app/
+│   ├── (ui)/           # Public-facing application pages (landing, quote builder, checkout)
+│   ├── api/            # Serverless API routes (quotes, checkout, pricing management)
+│   ├── dashboard/      # Admin analytics, order tracking & service management
+│   ├── layout.tsx      # Root layout & providers
+│   └── globals.css     # Global styles and Tailwind directives
+├── components/         # Reusable UI primitives & compound widgets
+├── lib/                # Database clients, Prisma instances, and helper utilities
+└── prisma/
+    └── schema.prisma   # Data models (InstantQuote, Service, Checkout, Pricing)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Prerequisites
+- Node.js `>= 20.x` or Bun
+- [pnpm](https://pnpm.io/) (`pnpm@11.x` recommended)
+- MongoDB instance (local or Atlas)
 
-## Learn More
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/msaad53407/apex-survey.git
+cd apex-survey
 
-To learn more about Next.js, take a look at the following resources:
+# Install dependencies using pnpm
+pnpm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Environment Configuration
+Create a `.env` file in the root directory:
+```env
+DATABASE_URL="mongodb+srv://<username>:<password>@cluster.mongodb.net/apex_survey?retryWrites=true&w=majority"
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Database Setup
+Generate the Prisma client:
+```bash
+pnpm prisma generate
+```
 
-## Deploy on Vercel
+### Running Locally
+```bash
+# Run the Next.js Turbopack development server
+pnpm dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Build for production
+pnpm build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Start the production server
+pnpm start
+```
+
+---
+
+## 📜 License
+Private / Proprietary
